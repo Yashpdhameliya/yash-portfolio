@@ -100,7 +100,7 @@ const jsonLd = {
     name: "Cloudus Infotech Pvt. Ltd.",
   },
   sameAs: socials.filter((s) => s.external).map((s) => s.href),
-  knowsAbout: ["Next.js", "React", "TypeScript", "NestJS", "Node.js", "MySQL", "PostgreSQL", "Redis", "AWS", "Docker", "Flutter", "Technical SEO", "AI-assisted development"],
+  knowsAbout: ["Next.js", "React", "TypeScript", "NestJS", "Node.js", "MySQL", "PostgreSQL", "Redis", "AWS", "Flutter", "Technical SEO", "AI-assisted development"],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

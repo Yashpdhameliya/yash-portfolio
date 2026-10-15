@@ -177,7 +177,7 @@ export const about = {
     },
     {
       title: "Cloud, DevOps & SEO",
-      text: "AWS, Linux servers, Nginx, Docker and CI/CD to take products live, plus technical SEO to keep them fast and visible.",
+      text: "AWS, Linux servers, Nginx and CI/CD to take products live, plus technical SEO to keep them fast and visible.",
       icon: "cloud",
     },
     {
@@ -372,11 +372,11 @@ export const coreSkills = [
 export const skillGroups = [
   {
     title: "Frontend",
-    items: ["Next.js", "React", "TypeScript", "JavaScript (ES6+)", "Redux Toolkit", "Zustand", "TanStack Query", "React Hook Form + Zod", "Tailwind CSS", "SCSS", "MUI", "Ant Design", "Chakra UI", "Storybook", "i18n (next-intl)"],
+    items: ["Next.js", "React", "TypeScript", "JavaScript (ES6+)", "Redux Toolkit", "Zustand", "React Hook Form + Zod", "Tailwind CSS", "SCSS", "MUI", "Ant Design", "Chakra UI", "Storybook", "i18n (next-intl)"],
   },
   {
     title: "Backend & APIs",
-    items: ["Node.js", "NestJS", "Express", "REST APIs", "Swagger / OpenAPI", "JWT & Passport auth", "2FA (TOTP)", "Socket.IO (real-time)", "BullMQ job queues", "Email (SendGrid)"],
+    items: ["Node.js", "NestJS", "Express", "REST APIs", "Swagger / OpenAPI", "JWT & Passport auth", "2FA (TOTP)", "Socket.IO (real-time)", "Email (SendGrid)"],
   },
   {
     title: "Databases",
@@ -384,11 +384,11 @@ export const skillGroups = [
   },
   {
     title: "Mobile",
-    items: ["Flutter", "Dart", "GetX", "Provider", "Firebase (FCM, Auth)", "WebView apps"],
+    items: ["Flutter", "Dart", "Firebase (FCM, Auth)", "WebView apps"],
   },
   {
     title: "Cloud & DevOps",
-    items: ["AWS", "EC2", "S3", "Amplify", "Linux (Ubuntu) servers", "Nginx", "Docker", "CI/CD (GitLab, Azure DevOps)", "Vercel", "Turborepo monorepos"],
+    items: ["AWS", "EC2", "S3", "Amplify", "Linux (Ubuntu) servers", "Nginx", "CI/CD (GitLab, Azure DevOps)", "Vercel", "Turborepo monorepos"],
   },
   {
     title: "AI & Automation",
@@ -400,19 +400,19 @@ export const skillGroups = [
   },
   {
     title: "Payments",
-    items: ["Stripe", "PayPal", "Razorpay", "Apple Pay", "Google Pay", "Alipay", "Amazon Pay", "UPI"],
+    items: ["Stripe", "Stripe Link", "PayPal", "Razorpay", "PhonePe", "UPI", "Apple Pay", "Google Pay", "Amazon Pay", "Alipay", "PayPay"],
   },
   {
     title: "CMS",
-    items: ["Contentstack", "Webflow", "Headless CMS", "CKEditor"],
+    items: ["Contentstack", "Strapi", "Webflow", "Headless CMS", "CKEditor"],
   },
   {
-    title: "Testing & Tools",
-    items: ["Jest", "Vitest", "Playwright", "Postman", "Git", "GitHub", "GitLab", "Jira", "Asana"],
+    title: "Tools",
+    items: ["Git", "GitHub", "GitLab", "Postman", "Jira", "Asana"],
   },
   {
     title: "Leadership & Delivery",
-    items: ["Team leadership", "Mentoring", "Requirement analysis", "Sprint planning & estimation", "Code reviews", "Agile / Scrum"],
+    items: ["Team leadership", "Mentoring", "Requirement analysis", "Sprint planning & estimation", "Code reviews"],
   },
   {
     title: "Professional strengths",
@@ -422,7 +422,7 @@ export const skillGroups = [
 
 export const marqueeTech = [
   "Next.js", "React", "TypeScript", "Node.js", "NestJS", "MySQL", "PostgreSQL", "Redis", "Prisma",
-  "AWS", "Docker", "Flutter", "Tailwind CSS", "Stripe", "Claude Code", "SEO", "CI/CD",
+  "AWS", "Flutter", "Tailwind CSS", "Stripe", "Claude Code", "SEO", "CI/CD",
 ];
 
 export const education = {
