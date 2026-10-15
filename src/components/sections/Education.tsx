@@ -5,7 +5,7 @@ import { education, person } from "@/data/profile";
 
 export function Education() {
   return (
-    <section id="education" className="scroll-mt-20 pb-20 md:pb-28">
+    <section id="education" className="scroll-mt-20 pt-[var(--section-y)]">
       <Container>
         <Reveal>
           <div className="grid gap-4 md:grid-cols-[1.4fr_1fr]">

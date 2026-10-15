@@ -10,19 +10,19 @@ export function Contact() {
   const { city, region, postalCode, country } = person.address;
 
   return (
-    <section id="contact" className="relative scroll-mt-20 overflow-hidden py-[clamp(5rem,10vw,10rem)]">
+    <section id="contact" className="relative scroll-mt-20 overflow-hidden py-[var(--section-y)]">
       <div
         className="glow pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[700px] w-[min(1100px,140vw)] -translate-x-1/2 -translate-y-1/2"
         aria-hidden
       />
       <Container>
-        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-[clamp(3rem,6vw,8rem)] [&>*]:min-w-0">
+        <div className="grid grid-cols-1 items-center gap-[var(--heading-gap)] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-[clamp(3rem,6vw,8rem)] [&>*]:min-w-0">
           {/* Pitch */}
           <Reveal>
             <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-accent">
               05 <span className="text-fg-faint">—</span> {contact.eyebrow}
             </p>
-            <h2 className="display text-[clamp(2.75rem,1.4rem+4.8vw,7rem)] text-fg">
+            <h2 className="display text-[clamp(2.25rem,1.3rem+3.6vw,5.75rem)] text-fg">
               {contact.title} <span className="italic text-accent">{contact.titleAccent}</span>
             </h2>
             <p className="mt-6 max-w-xl text-[clamp(1rem,0.92rem+0.4vw,1.3rem)] leading-relaxed text-fg-muted">

@@ -96,6 +96,11 @@ html {
 :root {
   /* Side padding that grows with the viewport. */
   --gutter: clamp(1.25rem, 5vw, 6rem);
+  /* One vertical rhythm for the whole page: the gap between any two sections
+     (each section only pads its top, so gaps never double up). */
+  --section-y: clamp(5rem, 8vw, 9rem);
+  /* Gap between a section heading and its content. */
+  --heading-gap: clamp(2rem, 3.5vw, 3.5rem);
 }
 
 body {

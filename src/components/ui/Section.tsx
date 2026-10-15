@@ -13,10 +13,10 @@ type Props = {
 
 export function Section({ id, index, eyebrow, title, intro, className = "", children }: Props) {
   return (
-    <section id={id} className={`scroll-mt-20 py-[clamp(4.5rem,9vw,9rem)] ${className}`}>
+    <section id={id} className={`scroll-mt-20 pt-[var(--section-y)] ${className}`}>
       <Container>
         <Reveal>
-          <div className="mb-[clamp(2.5rem,5vw,5rem)] max-w-5xl">
+          <div className="mb-[var(--heading-gap)] max-w-5xl">
             <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-accent">
               {index} <span className="text-fg-faint">—</span> {eyebrow}
             </p>

@@ -5,7 +5,7 @@ import { stats } from "@/data/profile";
 
 export function Stats() {
   return (
-    <section aria-label="Highlights" className="py-10 md:py-14">
+    <section aria-label="Highlights" className="md:landscape:pt-[calc(var(--section-y)*0.5)]">
       <Container>
         <Reveal>
           <ul className="grid grid-cols-2 overflow-hidden rounded-card border border-line bg-bg-elev md:grid-cols-4">
