@@ -1,20 +1,20 @@
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Marquee } from "@/components/ui/Marquee";
-import { marqueeTech, skillGroups } from "@/data/profile";
+import { marqueeTech, sections, skillGroups } from "@/data/profile";
 
 export function Skills() {
   return (
     <Section
       id="skills"
       index="04"
-      eyebrow="Skills"
+      eyebrow={sections.skills.eyebrow}
       title={
         <>
-          The full stack, <span className="italic text-accent">end to end.</span>
+          {sections.skills.title} <span className="italic text-accent">{sections.skills.accent}</span>
         </>
       }
-      intro="Frontend is where I started. Today I design the database, write the API, run the server it ships on, and make sure it loads fast and ranks well."
+      intro={sections.skills.intro}
     >
       <Reveal>
         <div className="-mx-[var(--gutter)] border-y border-line">

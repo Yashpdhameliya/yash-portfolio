@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Chip } from "@/components/ui/Chip";
-import { projects, type Project } from "@/data/profile";
+import { projects, sections, type Project } from "@/data/profile";
 
 function BrowserFrame({ project }: { project: Project }) {
   return (
@@ -107,13 +107,13 @@ export function Projects() {
     <Section
       id="projects"
       index="03"
-      eyebrow="Selected work"
+      eyebrow={sections.projects.eyebrow}
       title={
         <>
-          Products I&apos;ve led and built, <span className="italic text-accent">live in production.</span>
+          {sections.projects.title} <span className="italic text-accent">{sections.projects.accent}</span>
         </>
       }
-      intro="A selection from 15+ shipped projects — global eSIM commerce, multi-tenant education platforms, luxury hospitality and CMS-driven eCommerce."
+      intro={sections.projects.intro}
     >
       <div className="grid gap-5 md:gap-6">
         {featured ? (

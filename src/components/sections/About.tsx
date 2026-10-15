@@ -1,7 +1,7 @@
 import { Code2, Layers, Sparkles, Users } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
-import { about } from "@/data/profile";
+import { about, sections } from "@/data/profile";
 
 const icons = { layers: Layers, code: Code2, users: Users, sparkles: Sparkles } as const;
 
@@ -10,10 +10,10 @@ export function About() {
     <Section
       id="about"
       index="01"
-      eyebrow="About"
+      eyebrow={sections.about.eyebrow}
       title={
         <>
-          From frontend developer to <span className="italic text-accent">the person who owns the stack.</span>
+          {sections.about.title} <span className="italic text-accent">{sections.about.accent}</span>
         </>
       }
     >

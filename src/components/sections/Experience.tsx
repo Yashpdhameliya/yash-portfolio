@@ -5,7 +5,7 @@ import { motion, useScroll, useSpring } from "motion/react";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Chip } from "@/components/ui/Chip";
-import { experience } from "@/data/profile";
+import { experience, sections } from "@/data/profile";
 
 export function Experience() {
   const ref = useRef<HTMLOListElement>(null);
@@ -16,10 +16,10 @@ export function Experience() {
     <Section
       id="experience"
       index="02"
-      eyebrow="Experience"
+      eyebrow={sections.experience.eyebrow}
       title={
         <>
-          Nearly five years of <span className="italic text-accent">shipping real products.</span>
+          {sections.experience.title} <span className="italic text-accent">{sections.experience.accent}</span>
         </>
       }
     >

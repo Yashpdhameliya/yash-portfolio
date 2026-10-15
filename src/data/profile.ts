@@ -45,7 +45,7 @@ export const person = {
   tagline:
     "I design and ship complete web & mobile products — from architecture to production.",
   pitch:
-    "Nearly 5 years of turning ideas into production systems with Next.js, Nest.js, MySQL and Flutter. I lead the team, make the technical decisions, stay hands-on in the code, and build with AI at every step.",
+    "I plan, build and ship web and mobile products with Next.js, Nest.js, MySQL and Flutter. I lead the team, work directly with clients, and stay hands-on in the code — using AI to learn faster and work smarter.",
   photo: "/images/profile.webp",
   avatar: "/images/avatar.webp",
   languages: ["English", "Hindi", "Gujarati"],
@@ -128,6 +128,26 @@ export const contact = {
   ] satisfies { label: string; value: string; href: string; icon: SocialIconName; external: boolean; hint: string }[],
 };
 
+/** Section headings: plain part + italic accent part, and an optional intro line. */
+export const sections = {
+  about: { eyebrow: "About", title: "I lead the team", accent: "and still write the code." },
+  experience: { eyebrow: "Experience", title: "Nearly five years of", accent: "building and learning." },
+  projects: {
+    eyebrow: "Selected work",
+    title: "Some of the projects",
+    accent: "I've worked on.",
+    intro:
+      "A few of the 15+ projects I've been part of — eSIM platforms, school exam software, hotel and eCommerce websites, and a mental-health app.",
+  },
+  skills: {
+    eyebrow: "Skills",
+    title: "The full stack,",
+    accent: "end to end.",
+    intro:
+      "Frontend is where I started. Today I also design the database, write the API, run the server, and make sure the site loads fast and ranks well.",
+  },
+};
+
 export const stats = [
   { value: 5, prefix: "~", suffix: "", label: "Years of experience", note: "since Dec 2021" },
   { value: 15, suffix: "+", label: "Production projects", note: "web, mobile & CMS" },
@@ -137,29 +157,29 @@ export const stats = [
 
 export const about = {
   paragraphs: [
-    "I'm a Tech Lead and Full-Stack Engineer based in Surat, India. I started as a React developer and today own the whole technical side of a product — Next.js frontends, Nest.js APIs, MySQL databases, Ubuntu servers and CI/CD, through to SEO and performance.",
-    "At Cloudus Infotech I lead the development team, decide the architecture, review code, and take client projects from planning through QA and production release. Along the way I've shipped 15+ production products, including a global eSIM platform used in 50+ countries.",
-    "I care about clean, maintainable code, fast interfaces, and teams that ship predictably. I also use AI-assisted workflows for research, coding and QA so the team builds faster without cutting corners.",
+    "I'm Yash, a Tech Lead and Full-Stack Engineer from Surat, India. I started in 2021 as a React developer. Today I lead a team at Cloudus Infotech and work on every part of a product — frontend, backend, database, servers and SEO.",
+    "When a new requirement comes in, I plan it, choose the right tech, split the work, and talk with the client until everyone is on the same page. Then I build alongside my team and see it through to a stable release. I've worked on 15+ live projects this way, from a global eSIM platform to school, hotel and eCommerce sites.",
+    "If I don't know something, I learn it and get it done myself. AI is a big part of how I work — not just to write code, but to explore new ideas, understand problems properly, and think through each step. It helps me deliver more, without cutting corners.",
   ],
   strengths: [
     {
-      title: "Architecture & tech decisions",
-      text: "Pick the stack, design the system, and set the standards a project is built on.",
+      title: "Planning & tech decisions",
+      text: "I turn new requirements into a clear plan, pick the right stack, and design how everything fits together.",
       icon: "layers",
     },
     {
-      title: "Full-stack delivery",
-      text: "Frontend, API, database, servers and SEO — I ship the whole product, not one layer.",
+      title: "Full-stack, end to end",
+      text: "Frontend, API, database, server and SEO — I can build and ship the complete product.",
       icon: "code",
     },
     {
-      title: "Team leadership & mentoring",
-      text: "Code reviews, pairing and clear sprint workflows that help developers grow.",
+      title: "Team & client communication",
+      text: "I guide developers through reviews and clear sprints, and talk directly with clients so nothing gets lost.",
       icon: "users",
     },
     {
-      title: "AI-assisted workflows",
-      text: "AI tools woven into research, coding, review and QA to move faster with quality.",
+      title: "Quick learner, AI-powered",
+      text: "New tech doesn't slow me down. I use AI to explore ideas, understand deeply and work step by step.",
       icon: "sparkles",
     },
   ],
@@ -185,15 +205,15 @@ export const experience: Experience[] = [
     period: "May 2024 — Present",
     start: "2024-05",
     end: null,
-    note: "Joined as Senior Developer, grew into leading the team and its technical direction",
+    note: "Joined as Senior Developer and grew into leading the team",
     bullets: [
-      "Lead the development team and own technical direction — research, stack choices and system design — from planning through production release.",
-      "Work full-stack across Next.js frontends, Nest.js REST APIs, MySQL schema design, and deployment on Ubuntu servers.",
-      "Mentor developers through code reviews, best practices, performance optimization and clean-code standards.",
-      "Set up CI/CD pipelines, reusable component libraries and Jira-based sprint workflows that improved team velocity.",
-      "Own technical SEO and performance for client sites — metadata, structured data and Core Web Vitals, with 90+ Lighthouse scores on key projects.",
-      "Integrated secure authentication (Firebase, 2FA) and payment processing (Stripe and 10+ gateways) across products.",
-      "Brought AI-assisted workflows into the team's daily work — research, coding, code review and QA — to ship faster without lowering quality.",
+      "Lead the development team — plan sprints, review code, and help developers grow.",
+      "Turn new client requirements into a clear plan: scope, tech stack, system design and timeline.",
+      "Talk directly with clients to understand what they need, share progress, and handle changes.",
+      "Build full-stack: Next.js frontends, Nest.js APIs, MySQL databases, and deployment on Ubuntu servers — including secure login (Firebase, 2FA) and payments (Stripe and 10+ gateways).",
+      "Set up CI/CD, reusable components and Jira workflows so the team ships faster.",
+      "Handle technical SEO and performance — metadata, structured data, and 90+ Lighthouse scores on key sites.",
+      "Use AI every day to research, understand new problems and plan step by step — not just to write code.",
     ],
     tech: ["Next.js", "Nest.js", "TypeScript", "MySQL", "Tailwind CSS", "Firebase", "Stripe", "Ubuntu", "CI/CD", "SEO"],
   },
@@ -205,9 +225,9 @@ export const experience: Experience[] = [
     start: "2021-12",
     end: "2024-04",
     bullets: [
-      "Built user-centric, mobile-first frontend applications with React.js and Vite.js, focused on performance.",
-      "Implemented complex state management with Redux and Context API for dynamic, data-heavy applications.",
-      "Integrated REST APIs, contributed to component-based UI architecture, and took part in Agile sprints, QA and deployments.",
+      "Built fast, mobile-first web apps with React.js and Vite.js.",
+      "Managed complex app state with Redux and Context API for data-heavy screens.",
+      "Connected REST APIs, built reusable components, and took part in sprints, QA and releases.",
     ],
     tech: ["React.js", "Vite.js", "JavaScript (ES6+)", "SCSS", "Redux", "Firebase", "REST APIs"],
   },
@@ -354,16 +374,16 @@ export const skillGroups = [
     items: ["Stripe", "PayPal", "Apple Pay", "Google Pay", "Amazon Pay", "Alipay", "Razorpay", "UPI"],
   },
   {
-    title: "Process & Leadership",
-    items: ["Jira", "Asana", "Agile / Scrum", "Sprint planning", "Code reviews", "Mentoring"],
+    title: "Leadership & Process",
+    items: ["Requirement planning", "Client communication", "Sprint planning", "Code reviews", "Mentoring", "Jira", "Asana", "Agile / Scrum"],
   },
   {
     title: "SEO & Performance",
     items: ["Technical SEO", "Core Web Vitals", "Structured data (JSON-LD)", "Lighthouse audits", "Metadata & sitemaps"],
   },
   {
-    title: "AI & Research",
-    items: ["AI-assisted development", "Technical research", "Code review", "QA automation"],
+    title: "AI & Learning",
+    items: ["AI-assisted development", "Research & new ideas", "Step-by-step problem solving", "Fast self-learning"],
   },
 ];
 
