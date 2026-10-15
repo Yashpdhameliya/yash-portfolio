@@ -17,7 +17,7 @@ export function Skills() {
       intro="Frontend is where I started; today I'm equally comfortable designing the database, writing the API, and running the server it ships on."
     >
       <Reveal>
-        <div className="-mx-5 border-y border-line sm:-mx-8">
+        <div className="-mx-[var(--gutter)] border-y border-line">
           <Marquee items={marqueeTech} />
         </div>
       </Reveal>

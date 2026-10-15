@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useReducedMotion, useScroll, useSpring } from "motion/react";
+import { motion, useScroll, useSpring } from "motion/react";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Chip } from "@/components/ui/Chip";
@@ -9,7 +9,6 @@ import { experience } from "@/data/profile";
 
 export function Experience() {
   const ref = useRef<HTMLOListElement>(null);
-  const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 70%", "end 60%"] });
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30, mass: 0.3 });
 
@@ -29,7 +28,7 @@ export function Experience() {
         <div className="absolute bottom-0 left-[7px] top-2 w-px bg-line md:left-[calc(11rem+7px)]" aria-hidden />
         <motion.div
           className="absolute left-[7px] top-2 w-px origin-top bg-accent md:left-[calc(11rem+7px)]"
-          style={{ height: "calc(100% - 8px)", scaleY: reduce ? 1 : progress }}
+          style={{ height: "calc(100% - 8px)", scaleY: progress }}
           aria-hidden
         />
 

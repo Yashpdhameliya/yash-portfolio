@@ -18,9 +18,22 @@ export const person = {
   roleShort: "Team Lead · Full-Stack Developer",
   focus: "Web & Mobile",
   location: "Surat, Gujarat, India",
+  address: {
+    city: "Surat",
+    region: "Gujarat",
+    postalCode: "394101",
+    country: "India",
+    countryCode: "IN",
+  },
   timeZone: "Asia/Kolkata",
   email: "meyashpdhameliya18@gmail.com",
-  availability: "Open to full-time opportunities",
+  phone: {
+    display: "+91 81404 07600",
+    e164: "+918140407600",
+  },
+  // Shown in the hero badge and social preview image. Keep it neutral so the site
+  // works for job offers, client projects and general inquiries alike.
+  availability: "Available for new opportunities",
   currently: {
     title: "Team Lead & Project Architect",
     company: "Cloudus Infotech",
@@ -35,26 +48,81 @@ export const person = {
   careerStart: "2021-12-01",
 };
 
-export const socials = [
+export type SocialIconName = "github" | "linkedin" | "mail" | "phone" | "whatsapp";
+
+export type Social = {
+  label: string;
+  href: string;
+  handle: string;
+  icon: SocialIconName;
+  external: boolean;
+};
+
+export const socials: Social[] = [
   {
     label: "GitHub",
     href: "https://github.com/Yashpdhameliya",
     handle: "Yashpdhameliya",
     icon: "github",
+    external: true,
   },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/yash-dhameliya-563668146/",
     handle: "yash-dhameliya",
     icon: "linkedin",
+    external: true,
   },
   {
     label: "Email",
     href: `mailto:${person.email}`,
     handle: person.email,
     icon: "mail",
+    external: false,
   },
-] as const;
+  {
+    label: "Phone",
+    href: `tel:${person.phone.e164}`,
+    handle: person.phone.display,
+    icon: "phone",
+    external: false,
+  },
+];
+
+/** Direct ways to reach out, shown as cards in the Contact section. */
+export const contact = {
+  eyebrow: "Contact",
+  title: "Let's build something",
+  titleAccent: "together.",
+  intro:
+    "Have an opportunity, a product to build, or a question about my work? Reach out whichever way is easiest for you.",
+  methods: [
+    {
+      label: "Call",
+      value: person.phone.display,
+      href: `tel:${person.phone.e164}`,
+      icon: "phone",
+      external: false,
+      hint: "India Standard Time (UTC+5:30)",
+    },
+    {
+      label: "WhatsApp",
+      value: person.phone.display,
+      href: `https://wa.me/${person.phone.e164.replace("+", "")}?text=${encodeURIComponent("Hi Yash, I found your portfolio and would like to connect.")}`,
+      icon: "whatsapp",
+      external: true,
+      hint: "Quickest for a short message",
+    },
+    {
+      label: "Email",
+      value: person.email,
+      href: `mailto:${person.email}`,
+      icon: "mail",
+      external: false,
+      hint: "Best for details and attachments",
+    },
+  ] satisfies { label: string; value: string; href: string; icon: SocialIconName; external: boolean; hint: string }[],
+};
 
 export const stats = [
   { value: 5, prefix: "~", suffix: "", label: "Years of experience", note: "since Dec 2021" },

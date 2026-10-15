@@ -13,15 +13,15 @@ type Props = {
 
 export function Section({ id, index, eyebrow, title, intro, className = "", children }: Props) {
   return (
-    <section id={id} className={`scroll-mt-20 py-20 md:py-28 ${className}`}>
+    <section id={id} className={`scroll-mt-20 py-[clamp(4.5rem,9vw,9rem)] ${className}`}>
       <Container>
         <Reveal>
-          <div className="mb-12 max-w-3xl md:mb-16">
+          <div className="mb-[clamp(2.5rem,5vw,5rem)] max-w-5xl">
             <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-accent">
               {index} <span className="text-fg-faint">—</span> {eyebrow}
             </p>
-            <h2 className="display text-4xl text-fg sm:text-5xl md:text-6xl">{title}</h2>
-            {intro ? <p className="mt-5 text-base leading-relaxed text-fg-muted md:text-lg">{intro}</p> : null}
+            <h2 className="display text-[clamp(2.25rem,1.3rem+3.6vw,5.75rem)] text-fg">{title}</h2>
+            {intro ? <p className="mt-5 max-w-3xl text-[clamp(1rem,0.92rem+0.35vw,1.25rem)] leading-relaxed text-fg-muted">{intro}</p> : null}
           </div>
         </Reveal>
         {children}

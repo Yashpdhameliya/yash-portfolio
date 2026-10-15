@@ -80,17 +80,19 @@ const jsonLd = {
   url: site.url,
   image: `${site.url}${person.avatar}`,
   email: `mailto:${person.email}`,
+  telephone: person.phone.e164,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Surat",
-    addressRegion: "Gujarat",
-    addressCountry: "IN",
+    addressLocality: person.address.city,
+    addressRegion: person.address.region,
+    postalCode: person.address.postalCode,
+    addressCountry: person.address.countryCode,
   },
   worksFor: {
     "@type": "Organization",
     name: "Cloudus Infotech Pvt. Ltd.",
   },
-  sameAs: socials.filter((s) => s.icon !== "mail").map((s) => s.href),
+  sameAs: socials.filter((s) => s.external).map((s) => s.href),
   knowsAbout: ["Next.js", "React", "TypeScript", "Nest.js", "Node.js", "MySQL", "Flutter", "Tailwind CSS"],
 };
 

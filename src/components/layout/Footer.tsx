@@ -21,8 +21,8 @@ export function Footer() {
             <a
               key={s.label}
               href={s.href}
-              target={s.icon === "mail" ? undefined : "_blank"}
-              rel={s.icon === "mail" ? undefined : "noopener noreferrer"}
+              target={s.external ? "_blank" : undefined}
+              rel={s.external ? "noopener noreferrer" : undefined}
               aria-label={s.label}
               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line text-fg-muted transition-colors hover:border-accent hover:text-accent"
             >

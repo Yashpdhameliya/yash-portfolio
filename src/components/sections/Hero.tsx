@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { ArrowDown, Download, MapPin } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
@@ -40,10 +40,9 @@ function Words({ text, className = "" }: { text: string; className?: string }) {
 }
 
 export function Hero() {
-  const reduce = useReducedMotion();
 
   return (
-    <section id="home" className="relative overflow-hidden pt-32 pb-16 md:pt-44 md:pb-24">
+    <section id="home" className="relative overflow-hidden pt-[clamp(7rem,12vw,12rem)] pb-[clamp(3.5rem,6vw,7rem)]">
       <div className="dot-grid pointer-events-none absolute inset-0 -z-10" aria-hidden />
       <div
         className="glow pointer-events-none absolute left-1/2 top-[-120px] -z-10 h-[640px] w-[1000px] -translate-x-1/2"
@@ -54,7 +53,7 @@ export function Hero() {
         <motion.div
           className="grid items-center gap-14 md:grid-cols-[1.15fr_0.85fr] md:gap-10 lg:gap-16"
           variants={stagger}
-          initial={reduce ? false : "hidden"}
+          initial="hidden"
           animate="show"
         >
           {/* Copy */}
@@ -67,14 +66,14 @@ export function Hero() {
               {person.availability}
             </motion.div>
 
-            <h1 className="display text-[2.9rem] leading-[0.95] text-fg sm:text-6xl md:text-[4.4rem] lg:text-[5.4rem]">
+            <h1 className="display text-[clamp(2.6rem,0.8rem+4.6vw,6.5rem)] leading-[0.95] text-fg">
               <Words text={person.name} />
               <br />
               <Words text="Team Lead &" className="text-fg-muted" />{" "}
               <Words text="Full-Stack Developer." className="italic text-accent" />
             </h1>
 
-            <motion.p variants={fadeUp} className="mt-7 max-w-xl text-base leading-relaxed text-fg-muted md:text-lg">
+            <motion.p variants={fadeUp} className="mt-7 max-w-2xl text-[clamp(1rem,0.92rem+0.4vw,1.3rem)] leading-relaxed text-fg-muted">
               {person.pitch}
             </motion.p>
 
@@ -96,8 +95,8 @@ export function Hero() {
                 <a
                   key={s.label}
                   href={s.href}
-                  target={s.icon === "mail" ? undefined : "_blank"}
-                  rel={s.icon === "mail" ? undefined : "noopener noreferrer"}
+                  target={s.external ? "_blank" : undefined}
+                  rel={s.external ? "noopener noreferrer" : undefined}
                   className="inline-flex items-center gap-2 transition-colors hover:text-accent"
                 >
                   <SocialIcon name={s.icon} size={16} />
@@ -108,7 +107,7 @@ export function Hero() {
           </div>
 
           {/* Portrait */}
-          <motion.div variants={fadeUp} className="relative mx-auto mt-4 w-full max-w-[340px] md:mt-0 md:max-w-none">
+          <motion.div variants={fadeUp} className="relative mx-auto mt-4 w-full max-w-[340px] md:mt-0 md:max-w-[min(100%,600px)] md:justify-self-end">
             <div className="pointer-events-none absolute -inset-10 -z-10" aria-hidden>
               <div className="animate-float absolute left-[10%] top-[8%] h-56 w-56 rounded-full bg-accent/25 blur-3xl" />
               <div className="animate-float-slow absolute bottom-[6%] right-[4%] h-64 w-64 rounded-full bg-amber/20 blur-3xl" />
@@ -127,7 +126,7 @@ export function Hero() {
             </div>
 
             <motion.div
-              initial={reduce ? false : { opacity: 0, y: 14 }}
+              initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9, duration: 0.8, ease: EASE }}
               className="absolute -bottom-5 left-4 right-4 rounded-2xl border border-line bg-bg-elev/90 p-4 shadow-lg backdrop-blur md:-left-8 md:right-auto md:w-[290px]"
