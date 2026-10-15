@@ -83,7 +83,7 @@ export function Hero() {
                 <Words text={person.name} />
               </span>
               <span className="display mt-[clamp(0.5rem,1.5svh,1rem)] block text-[clamp(1.6rem,min(3.1vw,5.6svh),3.75rem)] leading-[1.05] text-fg-muted">
-                <Words text="Team Lead &" /> <Words text="Full-Stack Developer." className="italic text-accent" />
+                <Words text={person.headline.lead} /> <Words text={person.headline.accent} className="italic text-accent" />
               </span>
             </h1>
 
@@ -157,6 +157,7 @@ export function Hero() {
               <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-fg-faint">Currently</p>
               <p className="mt-1 text-sm font-medium text-fg">{person.currently.title}</p>
               <p className="text-sm text-fg-muted">@ {person.currently.company}</p>
+              <p className="mt-1.5 font-mono text-[10.5px] leading-snug text-accent-strong dark:text-accent">{person.currently.focus}</p>
               <p className="mt-1.5 inline-flex items-center gap-1.5 text-xs text-fg-muted">
                 <MapPin size={12} /> {person.location}
               </p>

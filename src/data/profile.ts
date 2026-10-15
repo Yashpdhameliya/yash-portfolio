@@ -3,9 +3,9 @@
 
 export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://yash-dhameliya.vercel.app",
-  title: "Yash Dhameliya — Team Lead & Full-Stack Developer",
+  title: "Yash Dhameliya — Tech Lead & Full-Stack Engineer",
   description:
-    "Team Lead & Full-Stack Developer from Surat, India. Nearly 5 years building production web and mobile products with Next.js, Nest.js, MySQL and Flutter — from architecture to release.",
+    "Tech Lead & Full-Stack Engineer from Surat, India. Nearly 5 years leading and building production web and mobile products with Next.js, Nest.js, MySQL and Flutter — from architecture and servers to SEO and release.",
   resumePath: "/resume/Yash_Dhameliya_Resume.pdf",
   resumeFileName: "Yash_Dhameliya_Resume.pdf",
 };
@@ -14,8 +14,11 @@ export const person = {
   name: "Yash Dhameliya",
   firstName: "Yash",
   initials: "YD",
-  role: "Team Lead & Full-Stack Developer",
-  roleShort: "Team Lead · Full-Stack Developer",
+  // Title used in metadata, structured data and the social preview image.
+  role: "Tech Lead & Full-Stack Engineer",
+  roleShort: "Tech Lead · Full-Stack Engineer",
+  // Hero second line: plain part + italic accent part.
+  headline: { lead: "Tech Lead &", accent: "Full-Stack Engineer." },
   focus: "Web & Mobile",
   location: "Surat, Gujarat, India",
   address: {
@@ -35,8 +38,9 @@ export const person = {
   // works for job offers, client projects and general inquiries alike.
   availability: "Available for new opportunities",
   currently: {
-    title: "Team Lead & Project Architect",
+    title: "Tech Lead",
     company: "Cloudus Infotech",
+    focus: "Full-stack · DevOps · SEO",
   },
   tagline:
     "I design and ship complete web & mobile products — from architecture to production.",
@@ -133,7 +137,7 @@ export const stats = [
 
 export const about = {
   paragraphs: [
-    "I'm a Team Lead and Full-Stack Developer based in Surat, India. I started as a React developer and grew into owning the entire technical setup of a product — Next.js frontends, Nest.js APIs, MySQL databases, and deployment on Ubuntu servers.",
+    "I'm a Tech Lead and Full-Stack Engineer based in Surat, India. I started as a React developer and today own the whole technical side of a product — Next.js frontends, Nest.js APIs, MySQL databases, Ubuntu servers and CI/CD, through to SEO and performance.",
     "At Cloudus Infotech I lead the development team, decide the architecture, review code, and take client projects from planning through QA and production release. Along the way I've shipped 15+ production products, including a global eSIM platform used in 50+ countries.",
     "I care about clean, maintainable code, fast interfaces, and teams that ship predictably. I also use AI-assisted workflows for research, coding and QA so the team builds faster without cutting corners.",
   ],
@@ -145,7 +149,7 @@ export const about = {
     },
     {
       title: "Full-stack delivery",
-      text: "Frontend, API, database and server — I ship the whole product, not one layer.",
+      text: "Frontend, API, database, servers and SEO — I ship the whole product, not one layer.",
       icon: "code",
     },
     {
@@ -177,19 +181,20 @@ export const experience: Experience[] = [
   {
     company: "Cloudus Infotech Pvt. Ltd.",
     location: "Surat, India",
-    role: "Team Lead & Project Architect",
+    role: "Tech Lead · Full-Stack",
     period: "May 2024 — Present",
     start: "2024-05",
     end: null,
-    note: "Joined as Senior Developer, promoted to Team Lead & Project Architect",
+    note: "Joined as Senior Developer, grew into leading the team and its technical direction",
     bullets: [
-      "Architect the technical stack and system design for client projects and lead them from planning through production release.",
+      "Lead the development team and own technical direction — research, stack choices and system design — from planning through production release.",
       "Work full-stack across Next.js frontends, Nest.js REST APIs, MySQL schema design, and deployment on Ubuntu servers.",
       "Mentor developers through code reviews, best practices, performance optimization and clean-code standards.",
       "Set up CI/CD pipelines, reusable component libraries and Jira-based sprint workflows that improved team velocity.",
+      "Own technical SEO and performance for client sites — metadata, structured data and Core Web Vitals, with 90+ Lighthouse scores on key projects.",
       "Integrated secure authentication (Firebase, 2FA) and payment processing (Stripe and 10+ gateways) across products.",
     ],
-    tech: ["Next.js", "Nest.js", "TypeScript", "MySQL", "Tailwind CSS", "Firebase", "Stripe", "Ubuntu", "CI/CD"],
+    tech: ["Next.js", "Nest.js", "TypeScript", "MySQL", "Tailwind CSS", "Firebase", "Stripe", "Ubuntu", "CI/CD", "SEO"],
   },
   {
     company: "Rejoicehub LLP",
@@ -352,14 +357,18 @@ export const skillGroups = [
     items: ["Jira", "Asana", "Agile / Scrum", "Sprint planning", "Code reviews", "Mentoring"],
   },
   {
-    title: "AI Workflows",
-    items: ["AI-assisted development", "Research", "Code review", "QA automation"],
+    title: "SEO & Performance",
+    items: ["Technical SEO", "Core Web Vitals", "Structured data (JSON-LD)", "Lighthouse audits", "Metadata & sitemaps"],
+  },
+  {
+    title: "AI & Research",
+    items: ["AI-assisted development", "Technical research", "Code review", "QA automation"],
   },
 ];
 
 export const marqueeTech = [
   "Next.js", "React", "TypeScript", "Nest.js", "Node.js", "MySQL", "Flutter", "Tailwind CSS",
-  "Firebase", "Stripe", "Contentstack", "Webflow", "Ubuntu", "Nginx", "CI/CD", "AWS", "Jira",
+  "Firebase", "Stripe", "Contentstack", "Webflow", "Ubuntu", "Nginx", "CI/CD", "AWS", "SEO", "Jira",
 ];
 
 export const education = {

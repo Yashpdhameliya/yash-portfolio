@@ -14,7 +14,7 @@ export function Skills() {
           The full stack, <span className="italic text-accent">end to end.</span>
         </>
       }
-      intro="Frontend is where I started; today I'm equally comfortable designing the database, writing the API, and running the server it ships on."
+      intro="Frontend is where I started. Today I design the database, write the API, run the server it ships on, and make sure it loads fast and ranks well."
     >
       <Reveal>
         <div className="-mx-[var(--gutter)] border-y border-line">
@@ -22,9 +22,9 @@ export function Skills() {
         </div>
       </Reveal>
 
-      <div className="mt-12 grid gap-x-10 gap-y-9 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-12 grid gap-x-10 gap-y-9 sm:grid-cols-2 lg:grid-cols-3">
         {skillGroups.map((g, i) => (
-          <Reveal key={g.title} delay={0.05 * (i % 4)}>
+          <Reveal key={g.title} delay={0.05 * (i % 3)}>
             <h3 className="mb-3 flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.12em] text-fg">
               <span className="h-px w-5 bg-accent" aria-hidden />
               {g.title}

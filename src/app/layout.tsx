@@ -33,8 +33,10 @@ export const metadata: Metadata = {
   description: site.description,
   keywords: [
     "Yash Dhameliya",
-    "Team Lead",
+    "Tech Lead",
+    "Full-Stack Engineer",
     "Full-Stack Developer",
+    "Team Lead",
     "Next.js developer",
     "Nest.js",
     "React developer",
