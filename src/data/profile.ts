@@ -3,9 +3,9 @@
 
 export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://yash-dhameliya.vercel.app",
-  title: "Yash Dhameliya — Tech Lead & AI-Native Full-Stack Engineer",
+  title: "Yash Dhameliya | Tech Lead & AI-Native Full-Stack Engineer",
   description:
-    "Tech Lead & AI-native Full-Stack Engineer from Surat, India. Nearly 5 years leading and building production web and mobile products with Next.js, NestJS, MySQL and Flutter — from architecture and servers to AI features, SEO and release.",
+    "Tech Lead & AI-native Full-Stack Engineer from Surat, India. Nearly 5 years leading and building production web and mobile products with Next.js, NestJS, MySQL and Flutter, from architecture and servers to AI features, SEO and release.",
   resumePath: "/resume/Yash_Dhameliya_Resume.pdf",
   resumeFileName: "Yash_Dhameliya_Resume.pdf",
 };
@@ -46,9 +46,9 @@ export const person = {
     focus: "Full-stack · AI · DevOps · SEO",
   },
   tagline:
-    "I design and ship complete web & mobile products — from architecture to production.",
+    "I design and ship complete web and mobile products, from architecture to production.",
   pitch:
-    "I plan, build and ship web and mobile products with Next.js, NestJS, MySQL and Flutter. I lead the team, work directly with clients, and stay hands-on in the code — using AI to learn faster and work smarter.",
+    "I plan, build and ship web and mobile products with Next.js, NestJS, MySQL and Flutter. I lead the team, work directly with clients, and stay hands-on in the code. I use AI to learn faster and work smarter.",
   photo: "/images/profile.webp",
   avatar: "/images/avatar.webp",
   languages: ["English", "Hindi", "Gujarati"],
@@ -140,7 +140,7 @@ export const sections = {
     title: "Some of the projects",
     accent: "I've worked on.",
     intro:
-      "A few of the 15+ projects I've been part of — eSIM platforms, school exam software, hotel and eCommerce websites, and a mental-health app.",
+      "A few of the 15+ projects I've been part of: eSIM platforms, school exam software, hotel and eCommerce websites, and a mental-health app.",
   },
   skills: {
     eyebrow: "Skills",
@@ -160,9 +160,9 @@ export const stats = [
 
 export const about = {
   paragraphs: [
-    "I'm Yash, a Tech Lead and Full-Stack Engineer from Surat, India. I started in 2021 as a React developer. Today I lead a team at Cloudus Infotech and work on every part of a product — frontend, backend, database, servers and SEO.",
+    "I'm Yash, a Tech Lead and Full-Stack Engineer from Surat, India. I started in 2021 as a React developer. Today I lead a team at Cloudus Infotech and work on every part of a product: frontend, backend, database, servers and SEO.",
     "When a new requirement comes in, I plan it, choose the right tech, split the work, and talk with the client until everyone is on the same page. Then I build alongside my team and see it through to a stable release. I've worked on 15+ live projects this way, from a global eSIM platform to school, hotel and eCommerce sites.",
-    "If I don't know something, I learn it and get it done myself. AI is a big part of how I work — not just to write code, but to explore new ideas, understand problems properly, and think through each step. It helps me deliver more, without cutting corners.",
+    "If I don't know something, I learn it and get it done myself. AI is a big part of how I work. Not just to write code, but to explore new ideas, understand problems properly, and think through each step. It helps me deliver more, without cutting corners.",
   ],
   strengths: [
     {
@@ -172,12 +172,12 @@ export const about = {
     },
     {
       title: "Full-stack engineering",
-      text: "Next.js, React, NestJS, Node.js, MySQL and PostgreSQL — I build the complete product, front to back.",
+      text: "I build the complete product, front to back, with Next.js, React, NestJS, Node.js, MySQL and PostgreSQL.",
       icon: "code",
     },
     {
       title: "Cloud, DevOps & SEO",
-      text: "AWS, Linux servers, Nginx, Docker and CI/CD to take products live — plus technical SEO to keep them fast and visible.",
+      text: "AWS, Linux servers, Nginx, Docker and CI/CD to take products live, plus technical SEO to keep them fast and visible.",
       icon: "cloud",
     },
     {
@@ -187,7 +187,7 @@ export const about = {
     },
     {
       title: "AI-native workflow",
-      text: "Claude Code, Codex, Copilot and Gemini are part of my daily work — for ideas, deep understanding and step-by-step planning.",
+      text: "Claude Code, Codex, Copilot and Gemini are part of my daily work. I use them for ideas, deep understanding and step-by-step planning.",
       icon: "sparkles",
     },
     {
@@ -215,20 +215,20 @@ export const experience: Experience[] = [
     company: "Cloudus Infotech Pvt. Ltd.",
     location: "Surat, India",
     role: "Tech Lead · Full-Stack",
-    period: "May 2024 — Present",
+    period: "May 2024 – Present",
     start: "2024-05",
     end: null,
     note: "Joined as Senior Developer and grew into leading the team",
     bullets: [
-      "Lead the development team — plan sprints, review code, and help developers grow.",
+      "Lead the development team: plan sprints, review code, and help developers grow.",
       "Turn new client requirements into a clear plan: scope, tech stack, system design and timeline.",
       "Talk directly with clients to understand what they need, share progress, and handle changes.",
       "Build full-stack: Next.js and React frontends, NestJS and Node.js APIs, MySQL and PostgreSQL with Prisma or TypeORM, Redis, and real-time features with Socket.IO.",
       "Ship secure login (JWT, Firebase, 2FA) and payments (Stripe and 10+ gateways) across products.",
       "Deploy and run apps on AWS (EC2, S3, Amplify) and Ubuntu servers with Nginx and CI/CD pipelines.",
       "Set up reusable component libraries, monorepos and Jira workflows so the team ships faster.",
-      "Handle technical SEO and performance — metadata, structured data, and 90+ Lighthouse scores on key sites.",
-      "Use AI tools daily (Claude Code, Codex, Copilot, Gemini) to research, understand new problems and plan step by step — not just to write code.",
+      "Handle technical SEO and performance: metadata, structured data, and 90+ Lighthouse scores on key sites.",
+      "Use AI tools daily (Claude Code, Codex, Copilot, Gemini) to research, understand new problems and plan step by step, not just to write code.",
     ],
     tech: ["Next.js", "React", "NestJS", "TypeScript", "MySQL", "PostgreSQL", "Prisma", "Redis", "AWS", "Flutter", "CI/CD", "SEO", "AI tools"],
   },
@@ -236,7 +236,7 @@ export const experience: Experience[] = [
     company: "Rejoicehub LLP",
     location: "Surat, India",
     role: "Jr. React.js Developer",
-    period: "Dec 2021 — Apr 2024",
+    period: "Dec 2021 – Apr 2024",
     start: "2021-12",
     end: "2024-04",
     bullets: [
@@ -278,7 +278,7 @@ export const projects: Project[] = [
       "Closed every finding from the VAPT security audit.",
     ],
     tech: ["Next.js", "TypeScript", "SCSS", "Firebase", "Stripe"],
-    image: null, // TODO: add screenshot — live site currently shows a "coming soon" page
+    image: null, // TODO: add screenshot; live site currently shows a "coming soon" page
     featured: true,
   },
   {
@@ -289,7 +289,7 @@ export const projects: Project[] = [
     domain: "exambro.app",
     role: "Frontend lead",
     summary:
-      "Multi-tenant, multi-school platform with role-based dashboards for super admins, school admins, teachers and students — rendered inside a Flutter app via WebView.",
+      "Multi-tenant, multi-school platform with role-based dashboards for super admins, school admins, teachers and students, rendered inside a Flutter app via WebView.",
     highlights: [
       "Print-ready PDF generation for exam papers and results, with MathJax equation rendering.",
       "Real-time Live Test module with timer and auto-submission.",
@@ -315,7 +315,7 @@ export const projects: Project[] = [
   },
   {
     slug: "dukkan",
-    name: "Qatar Duty Free — Dukkan",
+    name: "Dukkan by Qatar Duty Free",
     kind: "Employee eCommerce platform",
     url: "https://dukkan.qatardutyfree.com",
     domain: "dukkan.qatardutyfree.com",
@@ -327,7 +327,7 @@ export const projects: Project[] = [
       "Contentstack integration for products, promotions and content.",
     ],
     tech: ["Next.js", "TypeScript", "Storybook", "Contentstack"],
-    image: null, // TODO: add screenshot — platform is behind employee SSO login
+    image: null, // TODO: add screenshot; platform is behind employee SSO login
   },
   {
     slug: "olysim",

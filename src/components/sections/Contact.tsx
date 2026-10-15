@@ -20,7 +20,7 @@ export function Contact() {
           {/* Pitch */}
           <Reveal>
             <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-accent">
-              05 <span className="text-fg-faint">—</span> {contact.eyebrow}
+              05 <span className="text-fg-faint">/</span> {contact.eyebrow}
             </p>
             <h2 className="display text-[clamp(2.25rem,1.3rem+3.6vw,5.75rem)] text-fg">
               {contact.title} <span className="italic text-accent">{contact.titleAccent}</span>

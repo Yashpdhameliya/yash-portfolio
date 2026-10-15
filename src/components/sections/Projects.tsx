@@ -20,7 +20,7 @@ function BrowserFrame({ project }: { project: Project }) {
         {project.image ? (
           <Image
             src={project.image}
-            alt={`${project.name} — ${project.kind}`}
+            alt={`${project.name}, ${project.kind}`}
             fill
             sizes="(min-width: 1024px) 560px, (min-width: 640px) 50vw, 100vw"
             className="shot object-cover object-top"

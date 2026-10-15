@@ -51,7 +51,7 @@ export function Navbar() {
       <Container className="flex h-16 items-center justify-between md:h-[72px]">
         <a href="#top" className="group inline-flex items-center rounded-lg">
           <Logo />
-          <span className="sr-only"> — {person.name}, home</span>
+          <span className="sr-only">, {person.name}, home</span>
         </a>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">

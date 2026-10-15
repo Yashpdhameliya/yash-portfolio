@@ -1,4 +1,4 @@
-# Yash Dhameliya — Portfolio
+# Yash Dhameliya | Portfolio
 
 Personal portfolio of Yash Dhameliya, Tech Lead & AI-Native Full-Stack Engineer (Next.js · Nest.js · MySQL · Flutter), based in Surat, India.
 
@@ -16,7 +16,7 @@ npm run lint
 
 ## Editing content
 
-Everything shown on the site lives in one file: `src/data/profile.ts` — name, summary, stats, experience, projects, skills, education, social links. Components only render what they find there.
+Everything shown on the site lives in one file, `src/data/profile.ts`: name, summary, stats, experience, projects, skills, education, social links. Components only render what they find there.
 
 - **Resume:** replace `public/resume/Yash_Dhameliya_Resume.pdf` (same filename keeps the download link working).
 - **Photo:** `public/images/profile.webp` (4:5 portrait) and `public/images/avatar.webp` (square). Regenerate from an original with
