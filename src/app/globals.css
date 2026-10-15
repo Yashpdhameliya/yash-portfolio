@@ -1,26 +1,162 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---- Palette: warm, muted, editorial. Light by default, dark via .dark on <html>. ---- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #faf9f6;
+  --bg-elev: #ffffff;
+  --bg-soft: #f2f0ea;
+  --fg: #1a1a18;
+  --fg-muted: #5e5d57;
+  --fg-faint: #8f8e86;
+  --line: #e6e3db;
+  --line-strong: #d6d2c8;
+  --accent: #0f766e;
+  --accent-strong: #0b5f59;
+  --accent-soft: #e4f1ee;
+  --accent-glow: rgba(15, 118, 110, 0.18);
+  --amber: #b45309;
+  --amber-soft: #fbf1e3;
+  --selection: #cfe7e2;
+}
+
+.dark {
+  --bg: #0e0f10;
+  --bg-elev: #141617;
+  --bg-soft: #191b1d;
+  --fg: #ecebe5;
+  --fg-muted: #a6a59d;
+  --fg-faint: #6f6f68;
+  --line: #24272a;
+  --line-strong: #30343a;
+  --accent: #34d0bf;
+  --accent-strong: #5fe0d2;
+  --accent-soft: #0f2a28;
+  --accent-glow: rgba(52, 208, 191, 0.16);
+  --amber: #f0b454;
+  --amber-soft: #2a2114;
+  --selection: #1d4f4a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-bg: var(--bg);
+  --color-bg-elev: var(--bg-elev);
+  --color-bg-soft: var(--bg-soft);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-faint: var(--fg-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument), ui-serif, Georgia, serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SF Mono", Menlo, monospace;
+
+  --radius-card: 14px;
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-float: float 9s ease-in-out infinite;
+  --animate-float-slow: float 14s ease-in-out infinite reverse;
+  --animate-pulse-dot: pulse-dot 2.2s ease-in-out infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(14px, -18px, 0) scale(1.06); }
+  }
+  @keyframes pulse-dot {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55); }
+    60% { box-shadow: 0 0 0 7px rgba(34, 197, 94, 0); }
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+::selection {
+  background: var(--selection);
+}
+
+/* Dotted paper texture, very faint. */
+.dot-grid {
+  background-image: radial-gradient(var(--line-strong) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 90%);
+}
+
+/* Soft radial glow used in hero + contact. */
+.glow {
+  background: radial-gradient(60% 60% at 50% 50%, var(--accent-glow), transparent 70%);
+}
+
+/* Thin hairline helper. */
+.hairline {
+  border-color: var(--line);
+}
+
+/* Serif display headings. */
+.display {
+  font-family: var(--font-serif);
+  letter-spacing: -0.015em;
+  line-height: 0.98;
+  font-weight: 400;
+}
+
+/* Marquee track. */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: var(--animate-marquee);
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Screenshot pans inside the browser frame on hover. */
+.shot {
+  transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: scale(1);
+}
+.group:hover .shot {
+  transform: scale(1.035);
+}
+
+/* Focus rings that match the accent. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }

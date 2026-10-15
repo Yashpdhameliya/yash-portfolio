@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yash Dhameliya — Portfolio
 
-## Getting Started
+Personal portfolio of Yash Dhameliya, Team Lead & Full-Stack Developer (Next.js · Nest.js · MySQL · Flutter), based in Surat, India.
 
-First, run the development server:
+**Stack:** Next.js 16 (App Router, TypeScript) · Tailwind CSS v4 · Motion · next-themes · lucide-react. Deployed on Vercel.
+
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
+npm run start    # serve the production build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Editing content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Everything shown on the site lives in one file: `src/data/profile.ts` — name, summary, stats, experience, projects, skills, education, social links. Components only render what they find there.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Resume:** replace `public/resume/Yash_Dhameliya_Resume.pdf` (same filename keeps the download link working).
+- **Photo:** `public/images/profile.webp` (4:5 portrait) and `public/images/avatar.webp` (square). Regenerate from an original with
+  `node scripts/crop-profile.mjs <original.jpg> [left] [top] [width]`.
+- **Project screenshots:** `public/images/projects/<slug>.webp` (1200×750). Re-capture live sites with
+  `node scripts/capture-screenshots.mjs [slug ...]` (uses the locally installed Chrome). A project with `image: null` in `profile.ts` shows a designed cover instead.
+- **Site URL:** set `NEXT_PUBLIC_SITE_URL` (used for canonical URL, Open Graph, sitemap, JSON-LD). Defaults to `https://yash-dhameliya.vercel.app`.
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/app/            layout, page, globals.css, metadata routes (icon, opengraph-image, robots, sitemap)
+src/data/profile.ts all content
+src/components/
+  layout/           Navbar, Footer, ThemeProvider, ThemeToggle
+  sections/         Hero, Stats, About, Experience, Projects, Skills, Education, Contact
+  ui/               Section, Reveal, Counter, Marquee, Chip, Button, Magnetic, CopyEmail, LocalTime, SocialIcon
+scripts/            crop-profile.mjs, capture-screenshots.mjs
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Push to `main` on GitHub; Vercel builds and deploys automatically. No environment variables are required.
