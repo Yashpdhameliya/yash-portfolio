@@ -48,9 +48,10 @@ export function Navbar() {
       }`}
     >
       <Container className="flex h-16 items-center justify-between md:h-[72px]">
-        <a href="#top" className="font-serif text-[26px] leading-none tracking-tight text-fg" aria-label={`${person.name} — home`}>
+        <a href="#top" className="font-serif text-[26px] leading-none tracking-tight text-fg">
           {person.initials}
           <span className="text-accent">.</span>
+          <span className="sr-only"> {person.name} — home</span>
         </a>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
