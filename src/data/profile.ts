@@ -3,9 +3,9 @@
 
 export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://yash-dhameliya.vercel.app",
-  title: "Yash Dhameliya — Tech Lead & Full-Stack Engineer",
+  title: "Yash Dhameliya — Tech Lead & AI-Native Full-Stack Engineer",
   description:
-    "Tech Lead & Full-Stack Engineer from Surat, India. Nearly 5 years leading and building production web and mobile products with Next.js, Nest.js, MySQL and Flutter — from architecture and servers to SEO and release.",
+    "Tech Lead & AI-native Full-Stack Engineer from Surat, India. Nearly 5 years leading and building production web and mobile products with Next.js, Nest.js, MySQL and Flutter — from architecture and servers to AI features, SEO and release.",
   resumePath: "/resume/Yash_Dhameliya_Resume.pdf",
   resumeFileName: "Yash_Dhameliya_Resume.pdf",
 };
@@ -15,10 +15,10 @@ export const person = {
   firstName: "Yash",
   initials: "YD",
   // Title used in metadata, structured data and the social preview image.
-  role: "Tech Lead & Full-Stack Engineer",
-  roleShort: "Tech Lead · Full-Stack Engineer",
+  role: "Tech Lead & AI-Native Full-Stack Engineer",
+  roleShort: "Tech Lead · AI-Native Full-Stack Engineer",
   // Hero second line: plain part + italic accent part.
-  headline: { lead: "Tech Lead &", accent: "Full-Stack Engineer." },
+  headline: { lead: "Tech Lead &", accent: "AI-Native Full-Stack Engineer." },
   focus: "Web & Mobile",
   location: "Surat, Gujarat, India",
   address: {
@@ -40,12 +40,12 @@ export const person = {
   currently: {
     title: "Tech Lead",
     company: "Cloudus Infotech",
-    focus: "Full-stack · DevOps · SEO",
+    focus: "Full-stack · AI · DevOps · SEO",
   },
   tagline:
     "I design and ship complete web & mobile products — from architecture to production.",
   pitch:
-    "Nearly 5 years of turning ideas into production systems with Next.js, Nest.js, MySQL and Flutter. I lead the team, make the technical decisions, and stay hands-on in the code.",
+    "Nearly 5 years of turning ideas into production systems with Next.js, Nest.js, MySQL and Flutter. I lead the team, make the technical decisions, stay hands-on in the code, and build with AI at every step.",
   photo: "/images/profile.webp",
   avatar: "/images/avatar.webp",
   languages: ["English", "Hindi", "Gujarati"],
@@ -193,6 +193,7 @@ export const experience: Experience[] = [
       "Set up CI/CD pipelines, reusable component libraries and Jira-based sprint workflows that improved team velocity.",
       "Own technical SEO and performance for client sites — metadata, structured data and Core Web Vitals, with 90+ Lighthouse scores on key projects.",
       "Integrated secure authentication (Firebase, 2FA) and payment processing (Stripe and 10+ gateways) across products.",
+      "Brought AI-assisted workflows into the team's daily work — research, coding, code review and QA — to ship faster without lowering quality.",
     ],
     tech: ["Next.js", "Nest.js", "TypeScript", "MySQL", "Tailwind CSS", "Firebase", "Stripe", "Ubuntu", "CI/CD", "SEO"],
   },

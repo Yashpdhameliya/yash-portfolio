@@ -89,7 +89,7 @@ export function Hero() {
 
             <motion.p
               variants={fadeUp}
-              className="mt-[clamp(1.25rem,3.5svh,2.25rem)] max-w-[38rem] text-[clamp(1rem,0.9rem+0.35vw,1.2rem)] leading-relaxed text-fg-muted"
+              className="mt-[clamp(1.25rem,3.5svh,2.25rem)] max-w-[42rem] text-[clamp(1rem,0.9rem+0.35vw,1.2rem)] leading-relaxed text-fg-muted"
             >
               {person.pitch}
             </motion.p>

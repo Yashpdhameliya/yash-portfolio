@@ -1,6 +1,6 @@
 # Yash Dhameliya — Portfolio
 
-Personal portfolio of Yash Dhameliya, Tech Lead & Full-Stack Engineer (Next.js · Nest.js · MySQL · Flutter), based in Surat, India.
+Personal portfolio of Yash Dhameliya, Tech Lead & AI-Native Full-Stack Engineer (Next.js · Nest.js · MySQL · Flutter), based in Surat, India.
 
 **Stack:** Next.js 16 (App Router, TypeScript) · Tailwind CSS v4 · Motion · next-themes · lucide-react. Deployed on Vercel.
 

@@ -34,6 +34,7 @@ export const metadata: Metadata = {
   keywords: [
     "Yash Dhameliya",
     "Tech Lead",
+    "AI-Native Engineer",
     "Full-Stack Engineer",
     "Full-Stack Developer",
     "Team Lead",
