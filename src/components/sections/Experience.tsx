@@ -4,7 +4,6 @@ import { useRef } from "react";
 import { motion, useScroll, useSpring } from "motion/react";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
-import { Chip } from "@/components/ui/Chip";
 import { experience, sections } from "@/data/profile";
 
 export function Experience() {
@@ -63,11 +62,6 @@ export function Experience() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {job.tech.map((t) => (
-                  <Chip key={t}>{t}</Chip>
-                ))}
-              </div>
             </div>
           </Reveal>
         ))}

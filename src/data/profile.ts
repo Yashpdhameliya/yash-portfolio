@@ -207,7 +207,6 @@ export type Experience = {
   end: string | null;
   note?: string;
   bullets: string[];
-  tech: string[];
 };
 
 export const experience: Experience[] = [
@@ -230,7 +229,6 @@ export const experience: Experience[] = [
       "Handle technical SEO and performance: metadata, structured data, and 90+ Lighthouse scores on key sites.",
       "Use AI tools daily (Claude Code, Codex, Copilot, Gemini) to research, understand new problems and plan step by step, not just to write code.",
     ],
-    tech: ["Next.js", "React", "NestJS", "TypeScript", "MySQL", "PostgreSQL", "Prisma", "Redis", "AWS", "Flutter", "CI/CD", "SEO", "AI tools"],
   },
   {
     company: "Rejoicehub LLP",
@@ -244,7 +242,6 @@ export const experience: Experience[] = [
       "Managed complex app state with Redux and Context API for data-heavy screens.",
       "Connected REST APIs, built reusable components, and took part in sprints, QA and releases.",
     ],
-    tech: ["React", "Vite", "JavaScript (ES6+)", "Redux", "SCSS", "Firebase", "REST APIs"],
   },
 ];
 
