@@ -51,7 +51,7 @@ export default function Image() {
             fontFamily: "monospace",
           }}
         >
-          <div>Next.js · Nest.js · MySQL · Flutter</div>
+          <div>Next.js · NestJS · AWS · Flutter · AI</div>
           <div>{site.url.replace(/^https?:\/\//, "")}</div>
         </div>
       </div>

@@ -5,7 +5,7 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://yash-dhameliya.vercel.app",
   title: "Yash Dhameliya — Tech Lead & AI-Native Full-Stack Engineer",
   description:
-    "Tech Lead & AI-native Full-Stack Engineer from Surat, India. Nearly 5 years leading and building production web and mobile products with Next.js, Nest.js, MySQL and Flutter — from architecture and servers to AI features, SEO and release.",
+    "Tech Lead & AI-native Full-Stack Engineer from Surat, India. Nearly 5 years leading and building production web and mobile products with Next.js, NestJS, MySQL and Flutter — from architecture and servers to AI features, SEO and release.",
   resumePath: "/resume/Yash_Dhameliya_Resume.pdf",
   resumeFileName: "Yash_Dhameliya_Resume.pdf",
 };
@@ -45,7 +45,7 @@ export const person = {
   tagline:
     "I design and ship complete web & mobile products — from architecture to production.",
   pitch:
-    "I plan, build and ship web and mobile products with Next.js, Nest.js, MySQL and Flutter. I lead the team, work directly with clients, and stay hands-on in the code — using AI to learn faster and work smarter.",
+    "I plan, build and ship web and mobile products with Next.js, NestJS, MySQL and Flutter. I lead the team, work directly with clients, and stay hands-on in the code — using AI to learn faster and work smarter.",
   photo: "/images/profile.webp",
   avatar: "/images/avatar.webp",
   languages: ["English", "Hindi", "Gujarati"],
@@ -144,7 +144,7 @@ export const sections = {
     title: "The full stack,",
     accent: "end to end.",
     intro:
-      "Frontend is where I started. Today I also design the database, write the API, run the server, and make sure the site loads fast and ranks well.",
+      "Frontend is where I started. Today I also design the database, build the API, run it on AWS, ship the mobile app, and make sure it loads fast and ranks well. Highlighted skills are the ones I use most.",
   },
 };
 
@@ -168,19 +168,29 @@ export const about = {
       icon: "layers",
     },
     {
-      title: "Full-stack, end to end",
-      text: "Frontend, API, database, server and SEO — I can build and ship the complete product.",
+      title: "Full-stack engineering",
+      text: "Next.js, React, NestJS, Node.js, MySQL and PostgreSQL — I build the complete product, front to back.",
       icon: "code",
     },
     {
-      title: "Team & client communication",
+      title: "Cloud, DevOps & SEO",
+      text: "AWS, Linux servers, Nginx, Docker and CI/CD to take products live — plus technical SEO to keep them fast and visible.",
+      icon: "cloud",
+    },
+    {
+      title: "Team lead & client communication",
       text: "I guide developers through reviews and clear sprints, and talk directly with clients so nothing gets lost.",
       icon: "users",
     },
     {
-      title: "Quick learner, AI-powered",
-      text: "New tech doesn't slow me down. I use AI to explore ideas, understand deeply and work step by step.",
+      title: "AI-native workflow",
+      text: "Claude Code, Codex, Copilot and Gemini are part of my daily work — for ideas, deep understanding and step-by-step planning.",
       icon: "sparkles",
+    },
+    {
+      title: "Quick learner & problem solver",
+      text: "Strong logical thinking. When something is new, I learn it fast, break the problem down, and solve it myself.",
+      icon: "brain",
     },
   ],
 };
@@ -210,12 +220,14 @@ export const experience: Experience[] = [
       "Lead the development team — plan sprints, review code, and help developers grow.",
       "Turn new client requirements into a clear plan: scope, tech stack, system design and timeline.",
       "Talk directly with clients to understand what they need, share progress, and handle changes.",
-      "Build full-stack: Next.js frontends, Nest.js APIs, MySQL databases, and deployment on Ubuntu servers — including secure login (Firebase, 2FA) and payments (Stripe and 10+ gateways).",
-      "Set up CI/CD, reusable components and Jira workflows so the team ships faster.",
+      "Build full-stack: Next.js and React frontends, NestJS and Node.js APIs, MySQL and PostgreSQL with Prisma or TypeORM, Redis, and real-time features with Socket.IO.",
+      "Ship secure login (JWT, Firebase, 2FA) and payments (Stripe and 10+ gateways) across products.",
+      "Deploy and run apps on AWS (EC2, S3, Amplify) and Ubuntu servers with Nginx and CI/CD pipelines.",
+      "Set up reusable component libraries, monorepos and Jira workflows so the team ships faster.",
       "Handle technical SEO and performance — metadata, structured data, and 90+ Lighthouse scores on key sites.",
-      "Use AI every day to research, understand new problems and plan step by step — not just to write code.",
+      "Use AI tools daily (Claude Code, Codex, Copilot, Gemini) to research, understand new problems and plan step by step — not just to write code.",
     ],
-    tech: ["Next.js", "Nest.js", "TypeScript", "MySQL", "Tailwind CSS", "Firebase", "Stripe", "Ubuntu", "CI/CD", "SEO"],
+    tech: ["Next.js", "React", "NestJS", "TypeScript", "MySQL", "PostgreSQL", "Prisma", "Redis", "AWS", "Flutter", "CI/CD", "SEO", "AI tools"],
   },
   {
     company: "Rejoicehub LLP",
@@ -225,11 +237,11 @@ export const experience: Experience[] = [
     start: "2021-12",
     end: "2024-04",
     bullets: [
-      "Built fast, mobile-first web apps with React.js and Vite.js.",
+      "Built fast, mobile-first web apps with React and Vite.",
       "Managed complex app state with Redux and Context API for data-heavy screens.",
       "Connected REST APIs, built reusable components, and took part in sprints, QA and releases.",
     ],
-    tech: ["React.js", "Vite.js", "JavaScript (ES6+)", "SCSS", "Redux", "Firebase", "REST APIs"],
+    tech: ["React", "Vite", "JavaScript (ES6+)", "Redux", "SCSS", "Firebase", "REST APIs"],
   },
 ];
 
@@ -348,48 +360,66 @@ export const projects: Project[] = [
   },
 ];
 
+/** Shown highlighted inside the skill groups — the stack recruiters should notice first. */
+export const coreSkills = [
+  "Next.js", "React", "TypeScript", "Node.js", "NestJS", "MySQL", "PostgreSQL",
+  "AWS", "Flutter", "Claude Code", "Team leadership", "Client communication",
+];
+
 export const skillGroups = [
   {
     title: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript", "JavaScript (ES6+)", "Vite.js", "Tailwind CSS", "SCSS", "Chakra UI", "Bootstrap"],
+    items: ["Next.js", "React", "TypeScript", "JavaScript (ES6+)", "Redux Toolkit", "Zustand", "TanStack Query", "React Hook Form + Zod", "Tailwind CSS", "SCSS", "MUI", "Ant Design", "Chakra UI", "Storybook", "i18n (next-intl)"],
   },
   {
-    title: "Backend & Database",
-    items: ["Nest.js", "Node.js", "REST APIs", "MySQL", "MongoDB", "Firebase"],
+    title: "Backend & APIs",
+    items: ["Node.js", "NestJS", "Express", "REST APIs", "Swagger / OpenAPI", "JWT & Passport auth", "2FA (TOTP)", "Socket.IO (real-time)", "BullMQ job queues", "Email (SendGrid)"],
+  },
+  {
+    title: "Databases",
+    items: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Prisma", "TypeORM", "Mongoose", "Firebase"],
   },
   {
     title: "Mobile",
-    items: ["Flutter", "Dart", "WebView integration"],
+    items: ["Flutter", "Dart", "GetX", "Provider", "Firebase (FCM, Auth)", "WebView apps"],
   },
   {
-    title: "Server & DevOps",
-    items: ["Ubuntu Server", "Nginx", "CI/CD Pipelines", "Vercel", "AWS (S3, EC2)", "GitHub", "GitLab", "Azure DevOps"],
+    title: "Cloud & DevOps",
+    items: ["AWS", "EC2", "S3", "Amplify", "Linux (Ubuntu) servers", "Nginx", "Docker", "CI/CD (GitLab, Azure DevOps)", "Vercel", "Turborepo monorepos"],
   },
   {
-    title: "CMS",
-    items: ["Webflow", "Contentstack", "CKEditor"],
-  },
-  {
-    title: "Payments",
-    items: ["Stripe", "PayPal", "Apple Pay", "Google Pay", "Amazon Pay", "Alipay", "Razorpay", "UPI"],
-  },
-  {
-    title: "Leadership & Process",
-    items: ["Requirement planning", "Client communication", "Sprint planning", "Code reviews", "Mentoring", "Jira", "Asana", "Agile / Scrum"],
+    title: "AI & Automation",
+    items: ["Claude Code", "OpenAI Codex", "GitHub Copilot", "Gemini CLI", "Google Antigravity", "Prompt engineering", "AI agent workflows", "OpenAI & Gemini APIs"],
   },
   {
     title: "SEO & Performance",
-    items: ["Technical SEO", "Core Web Vitals", "Structured data (JSON-LD)", "Lighthouse audits", "Metadata & sitemaps"],
+    items: ["Technical SEO", "Core Web Vitals", "Lighthouse 90+", "SSR / SSG", "Structured data (JSON-LD)", "Image & video optimization"],
   },
   {
-    title: "AI & Learning",
-    items: ["AI-assisted development", "Research & new ideas", "Step-by-step problem solving", "Fast self-learning"],
+    title: "Payments",
+    items: ["Stripe", "PayPal", "Razorpay", "Apple Pay", "Google Pay", "Alipay", "Amazon Pay", "UPI"],
+  },
+  {
+    title: "CMS",
+    items: ["Contentstack", "Webflow", "Headless CMS", "CKEditor"],
+  },
+  {
+    title: "Testing & Tools",
+    items: ["Jest", "Vitest", "Playwright", "Postman", "Git", "GitHub", "GitLab", "Jira", "Asana"],
+  },
+  {
+    title: "Leadership & Delivery",
+    items: ["Team leadership", "Mentoring", "Requirement analysis", "Sprint planning & estimation", "Code reviews", "Agile / Scrum"],
+  },
+  {
+    title: "Professional strengths",
+    items: ["Client communication", "Problem solving", "Logical thinking", "Quick learner", "Research", "Ownership"],
   },
 ];
 
 export const marqueeTech = [
-  "Next.js", "React", "TypeScript", "Nest.js", "Node.js", "MySQL", "Flutter", "Tailwind CSS",
-  "Firebase", "Stripe", "Contentstack", "Webflow", "Ubuntu", "Nginx", "CI/CD", "AWS", "SEO", "Jira",
+  "Next.js", "React", "TypeScript", "Node.js", "NestJS", "MySQL", "PostgreSQL", "Redis", "Prisma",
+  "AWS", "Docker", "Flutter", "Tailwind CSS", "Stripe", "Claude Code", "SEO", "CI/CD",
 ];
 
 export const education = {

@@ -1,7 +1,9 @@
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Marquee } from "@/components/ui/Marquee";
-import { marqueeTech, sections, skillGroups } from "@/data/profile";
+import { coreSkills, marqueeTech, sections, skillGroups } from "@/data/profile";
+
+const core = new Set<string>(coreSkills);
 
 export function Skills() {
   return (
@@ -22,9 +24,9 @@ export function Skills() {
         </div>
       </Reveal>
 
-      <div className="mt-12 grid gap-x-10 gap-y-9 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
         {skillGroups.map((g, i) => (
-          <Reveal key={g.title} delay={0.05 * (i % 3)}>
+          <Reveal key={g.title} delay={0.04 * (i % 4)}>
             <h3 className="mb-3 flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.12em] text-fg">
               <span className="h-px w-5 bg-accent" aria-hidden />
               {g.title}
@@ -33,7 +35,11 @@ export function Skills() {
               {g.items.map((item) => (
                 <li
                   key={item}
-                  className="rounded-lg border border-line bg-bg-elev px-2.5 py-1.5 text-[13px] text-fg-muted transition-colors hover:border-accent/50 hover:text-fg"
+                  className={`rounded-lg border px-2.5 py-1.5 text-[13px] transition-colors ${
+                    core.has(item)
+                      ? "border-accent/40 bg-accent-soft font-medium text-accent-strong dark:text-accent"
+                      : "border-line bg-bg-elev text-fg-muted hover:border-accent/50 hover:text-fg"
+                  }`}
                 >
                   {item}
                 </li>
