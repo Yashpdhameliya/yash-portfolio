@@ -10,6 +10,9 @@ export const site = {
   resumeFileName: "Yash_Dhameliya_Resume.pdf",
 };
 
+/** Wordmark next to the logo mark: plain part + accent-coloured part. */
+export const brand = { word: "Yash", accent: "Dev" };
+
 export const person = {
   name: "Yash Dhameliya",
   firstName: "Yash",

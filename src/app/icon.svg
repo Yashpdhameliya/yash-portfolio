@@ -1,4 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="14" fill="#0f766e"/>
-  <text x="32" y="43" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#faf9f6" letter-spacing="-1">YD</text>
+  <defs>
+    <linearGradient id="l" x1="10" y1="10" x2="30" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5eead4"/><stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="r" x1="34" y1="10" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ccfbf1"/><stop offset="1" stop-color="#5eead4"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#0e0f10"/>
+  <path d="M28.5 13 15 32l13.5 19" stroke="url(#l)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M35.5 13 49 32 35.5 51" stroke="url(#r)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <rect x="28" y="28" width="8" height="8" rx="1.6" transform="rotate(45 32 32)" fill="#f59e0b"/>
 </svg>
