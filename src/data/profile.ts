@@ -253,7 +253,10 @@ export type Project = {
   domain: string;
   role: string;
   summary: string;
-  highlights: string[];
+  /** Short bullet list, used on regular project cards. */
+  highlights?: string[];
+  /** Grouped "What I built" grid, used on featured cards. */
+  features?: { title: string; points: string[] }[];
   tech: string[];
   image: string | null;
   featured?: boolean;
@@ -266,15 +269,73 @@ export const projects: Project[] = [
     kind: "Global eSIM store · Japan & worldwide",
     url: "https://main.waosim.com",
     domain: "main.waosim.com",
-    role: "Lead frontend developer",
+    role: "Project Team Lead",
     summary:
-      "An eSIM store for travellers to 190+ destinations, in English and Japanese with USD and JPY pricing. I set up and led three Next.js apps from the first commit: the customer site, the admin panel and the affiliate portal.",
-    highlights: [
-      "Checkout with Stripe cards, Apple Pay, Google Pay, PayPal, PayPay and Amazon Pay, plus wallet and split payments.",
-      "Sign-in with Google, Apple, Yahoo and LINE, and two-factor auth by SMS, email or an authenticator app.",
-      "eSIM QR install and sharing, top-ups, referrals, WaoClub rewards and live order status with Firebase.",
-      "Fixed all VAPT findings and hardened payments with security headers, HTML sanitization and rate limiting.",
-      "Admin dashboards with GA4 analytics and sales reports, and an affiliate portal with deep-link referral sharing.",
+      "An eSIM store for travellers to 190+ destinations, in English and Japanese with USD and JPY pricing. As project team lead, I set up and led three Next.js apps from the first commit: the customer site, the admin panel and the affiliate portal.",
+    features: [
+      {
+        title: "Team lead",
+        points: [
+          "Led the frontend team across all three apps",
+          "Set up the web, admin and affiliate projects from scratch",
+          "Upgraded the website from Next.js 14 to 15",
+        ],
+      },
+      {
+        title: "eSIM store",
+        points: [
+          "Country, regional and global plans with fast search and continent filters",
+          "Device compatibility checker, data-usage calculator and install guides",
+          "English and Japanese, with USD and JPY pricing",
+        ],
+      },
+      {
+        title: "Checkout & payments",
+        points: [
+          "Stripe cards, Apple Pay, Google Pay, PayPal, PayPay and Amazon Pay",
+          "Coupons, saved cards, wallet and split payments",
+        ],
+      },
+      {
+        title: "Login & security",
+        points: [
+          "Google, Apple, Yahoo and LINE sign-in with OTP",
+          "Two-factor auth by SMS, email or authenticator app",
+          "VAPT fixes, security headers, HTML sanitization and payment rate limiting",
+        ],
+      },
+      {
+        title: "My eSIM",
+        points: [
+          "QR install, sharing and transfer of eSIMs",
+          "Top-ups, invoices and live status with Firebase",
+          "Web push notifications",
+        ],
+      },
+      {
+        title: "Rewards & growth",
+        points: [
+          "Refer-and-earn, WaoClub cashback and WaoStars",
+          "Shared pool wallets for groups",
+          "Affiliate tracking from referral links",
+        ],
+      },
+      {
+        title: "AI & content",
+        points: [
+          "AI support agent and context-aware AI chat on country pages",
+          "Blog, news and help center with SEO schema and sitemap",
+        ],
+      },
+      {
+        title: "Admin & affiliate panels",
+        points: [
+          "Sales dashboard with date filters and Excel export",
+          "GA4 analytics with a map view",
+          "Roles, permissions and IP allowlist",
+          "Affiliate portal with payouts and deep-link sharing",
+        ],
+      },
     ],
     tech: ["Next.js 15", "TypeScript", "SCSS", "MUI", "Firebase", "Stripe", "i18next"],
     image: "/images/projects/waosim.webp",
@@ -289,11 +350,58 @@ export const projects: Project[] = [
     role: "Lead web & SEO developer",
     summary:
       "An eSIM and travel SIM store for 200+ destinations, run as two editions: olysim.in for India in INR and olysim.com for global travellers in USD. I'm the top contributor on the customer website and own its SEO.",
-    highlights: [
-      "Destination pages, checkout for new eSIMs, top-ups and physical SIMs, accounts, wallet and a loyalty program.",
-      "Payments with Stripe (cards, Apple Pay, Google Pay), PayPal, Razorpay, PhonePe and UPI, with currency and GST set per domain.",
-      "Technical SEO across both domains: server rendering, hreflang, canonical redirects, sitemaps, IndexNow and rich JSON-LD.",
-      "Admin CMS with AI-assisted blog writing and per-destination SEO and FAQs, plus work on the B2B distributor portal and Laravel API.",
+    features: [
+      {
+        title: "Store & destinations",
+        points: [
+          "200+ destination pages with FAQs, related trips and customer reviews",
+          "Country and region plans with fast search",
+          "Checkout for new eSIMs, top-ups and physical SIMs with shipping",
+        ],
+      },
+      {
+        title: "Two editions, one codebase",
+        points: [
+          "olysim.in in INR and olysim.com in USD",
+          "Domain-based currency, GST by buyer country and KYC rules",
+          "Region-aware middleware and banners",
+        ],
+      },
+      {
+        title: "Payments",
+        points: [
+          "Stripe cards, Apple Pay, Google Pay and PayPal",
+          "Razorpay, PhonePe and UPI for India",
+          "Coupons and wallet credit",
+        ],
+      },
+      {
+        title: "Accounts & loyalty",
+        points: [
+          "OTP and Google sign-in, orders and wallet",
+          "OlyCoins loyalty tiers with cashback",
+          "Referral program",
+        ],
+      },
+      {
+        title: "Technical SEO",
+        points: [
+          "Server rendering, hreflang and canonical redirects across both domains",
+          "Sitemaps, IndexNow, robots.txt and llms.txt per domain",
+          "Rich JSON-LD: Product, FAQ, HowTo, Reviews and Breadcrumbs",
+          "Crawlable blog with real 404s",
+        ],
+      },
+      {
+        title: "Admin, CMS & backend",
+        points: [
+          "AI-assisted blog writing with 16:9 cover images",
+          "Per-destination SEO and FAQ editor for both domains",
+          "Reviews tab with WhatsApp review links",
+          "Laravel commands to import and export SEO content",
+          "B2B distributor portal: login, wallet and vouchers",
+        ],
+      },
     ],
     tech: ["Next.js 15", "TypeScript", "SCSS", "Bootstrap", "next-seo", "Stripe", "Razorpay", "Laravel"],
     image: "/images/projects/olysim.webp",
