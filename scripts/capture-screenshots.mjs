@@ -9,7 +9,8 @@ import path from "node:path";
 import sharp from "sharp";
 
 const SITES = [
-  { slug: "waosim", url: "https://waosim.com/" },
+  // waosim.com is a "coming soon" page; the live app runs on main.waosim.com.
+  { slug: "waosim", url: "https://main.waosim.com/" },
   { slug: "exambro", url: "https://exambro.app/" },
   { slug: "sirohotels", url: "https://sirohotels.com/" },
   { slug: "olysim", url: "https://olysim.com/" },

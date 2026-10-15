@@ -263,19 +263,40 @@ export const projects: Project[] = [
   {
     slug: "waosim",
     name: "WaoSim",
-    kind: "Global eSIM purchase platform",
-    url: "https://waosim.com",
-    domain: "waosim.com",
-    role: "Frontend lead",
+    kind: "Global eSIM store · Japan & worldwide",
+    url: "https://main.waosim.com",
+    domain: "main.waosim.com",
+    role: "Lead frontend developer",
     summary:
-      "A global eSIM marketplace for travellers in 50+ countries, with 10+ payment methods and a fully localized checkout.",
+      "An eSIM store for travellers to 190+ destinations, in English and Japanese with USD and JPY pricing. I set up and led three Next.js apps from the first commit: the customer site, the admin panel and the affiliate portal.",
     highlights: [
-      "Led the frontend team and integrated Stripe, PayPal, Apple Pay, Google Pay and Alipay.",
-      "Built 2FA (TOTP), affiliate tracking, multi-language support, dynamic currency switching and push notifications.",
-      "Closed every finding from the VAPT security audit.",
+      "Checkout with Stripe cards, Apple Pay, Google Pay, PayPal, PayPay and Amazon Pay, plus wallet and split payments.",
+      "Sign-in with Google, Apple, Yahoo and LINE, and two-factor auth by SMS, email or an authenticator app.",
+      "eSIM QR install and sharing, top-ups, referrals, WaoClub rewards and live order status with Firebase.",
+      "Fixed all VAPT findings and hardened payments with security headers, HTML sanitization and rate limiting.",
+      "Admin dashboards with GA4 analytics and sales reports, and an affiliate portal with deep-link referral sharing.",
     ],
-    tech: ["Next.js", "TypeScript", "SCSS", "Firebase", "Stripe"],
-    image: null, // TODO: add screenshot; live site currently shows a "coming soon" page
+    tech: ["Next.js 15", "TypeScript", "SCSS", "MUI", "Firebase", "Stripe", "i18next"],
+    image: "/images/projects/waosim.webp",
+    featured: true,
+  },
+  {
+    slug: "olysim",
+    name: "OlySim",
+    kind: "eSIM store · India & global",
+    url: "https://olysim.com",
+    domain: "olysim.com",
+    role: "Lead web & SEO developer",
+    summary:
+      "An eSIM and travel SIM store for 200+ destinations, run as two editions: olysim.in for India in INR and olysim.com for global travellers in USD. I'm the top contributor on the customer website and own its SEO.",
+    highlights: [
+      "Destination pages, checkout for new eSIMs, top-ups and physical SIMs, accounts, wallet and a loyalty program.",
+      "Payments with Stripe (cards, Apple Pay, Google Pay), PayPal, Razorpay, PhonePe and UPI, with currency and GST set per domain.",
+      "Technical SEO across both domains: server rendering, hreflang, canonical redirects, sitemaps, IndexNow and rich JSON-LD.",
+      "Admin CMS with AI-assisted blog writing and per-destination SEO and FAQs, plus work on the B2B distributor portal and Laravel API.",
+    ],
+    tech: ["Next.js 15", "TypeScript", "SCSS", "Bootstrap", "next-seo", "Stripe", "Razorpay", "Laravel"],
+    image: "/images/projects/olysim.webp",
     featured: true,
   },
   {
@@ -327,22 +348,6 @@ export const projects: Project[] = [
     image: null, // TODO: add screenshot; platform is behind employee SSO login
   },
   {
-    slug: "olysim",
-    name: "OlySim",
-    kind: "India eSIM purchase platform",
-    url: "https://olysim.com",
-    domain: "olysim.com",
-    role: "Frontend lead",
-    summary:
-      "India-focused eSIM platform covering browsing, checkout and account flows with UPI, card and wallet payments.",
-    highlights: [
-      "Led the full frontend with a strong focus on SEO and conversion.",
-      "CKEditor-based content management for plans and pages.",
-    ],
-    tech: ["Next.js", "TypeScript", "SCSS", "CKEditor"],
-    image: "/images/projects/olysim.webp",
-  },
-  {
     slug: "mentalhappy",
     name: "MentalHappy",
     kind: "Mental health & wellness platform · USA",
@@ -360,7 +365,7 @@ export const projects: Project[] = [
   },
 ];
 
-/** Shown highlighted inside the skill groups — the stack recruiters should notice first. */
+/** Shown highlighted inside the skill groups: the stack recruiters should notice first. */
 export const coreSkills = [
   "Next.js", "React", "TypeScript", "Node.js", "NestJS", "MySQL", "PostgreSQL",
   "AWS", "Flutter", "Claude Code", "Team leadership", "Client communication",
@@ -373,7 +378,7 @@ export const skillGroups = [
   },
   {
     title: "Backend & APIs",
-    items: ["Node.js", "NestJS", "Express", "REST APIs", "Swagger / OpenAPI", "JWT & Passport auth", "2FA (TOTP)", "Socket.IO (real-time)", "Email (SendGrid)"],
+    items: ["Node.js", "NestJS", "Express", "Laravel (PHP)", "REST APIs", "Swagger / OpenAPI", "JWT & Passport auth", "2FA (TOTP)", "Socket.IO (real-time)", "Email (SendGrid)"],
   },
   {
     title: "Databases",

@@ -97,7 +97,7 @@ function Card({ project, layout = "card", label }: { project: Project; layout?: 
 }
 
 export function Projects() {
-  const featured = projects.find((p) => p.featured);
+  const featured = projects.filter((p) => p.featured);
   const rest = projects.filter((p) => !p.featured);
   // Last project closes the section as a wide card (image on the right) so the grid never leaves an orphan.
   const closing = rest.length % 2 === 1 ? rest[rest.length - 1] : undefined;
@@ -116,11 +116,11 @@ export function Projects() {
       intro={sections.projects.intro}
     >
       <div className="grid gap-5 md:gap-6">
-        {featured ? (
-          <Reveal>
-            <Card project={featured} layout="wide" label="Featured" />
+        {featured.map((p, i) => (
+          <Reveal key={p.slug}>
+            <Card project={p} layout={i % 2 === 0 ? "wide" : "wide-reverse"} label="Featured" />
           </Reveal>
-        ) : null}
+        ))}
         <div className="grid gap-5 sm:grid-cols-2 md:gap-6">
           {grid.map((p, i) => (
             <Reveal key={p.slug} delay={0.06 * (i % 2)}>
