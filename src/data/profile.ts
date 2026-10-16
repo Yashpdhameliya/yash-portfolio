@@ -478,16 +478,16 @@ export const projects: Project[] = [
     kind: "Salon & spa management software",
     url: "https://barbera.io",
     domain: "barbera.io",
-    role: "Developer",
+    role: "Frontend developer",
     summary:
-      "A cloud platform that runs the day-to-day of salons, spas and wellness studios, trusted by 600+ businesses in 4 countries. It comes with a mobile app for iOS and Android.",
+      "A cloud platform that runs salons, spas and wellness studios, trusted by 600+ businesses in 4 countries. I built the customer-facing frontend in React, connected to the REST API.",
     highlights: [
-      "Online booking and appointment calendar, billing and POS, and client records with feedback and reminders.",
-      "Memberships, vouchers and offers, plus WhatsApp and SMS messaging to keep clients coming back.",
-      "Inventory, expenses and profit and loss reports, with staff roles and permissions.",
-      "Real-time dashboard to manage multiple outlets from one account.",
+      "Service browsing and appointment booking flows for salon customers.",
+      "Responsive, mobile-first UI that works smoothly on phones.",
+      "REST API integration for bookings, services and client data.",
+      "The wider product covers POS, memberships, vouchers, WhatsApp messaging and multi-outlet dashboards.",
     ],
-    tech: ["Salon POS", "Booking", "Multi-outlet", "iOS & Android"],
+    tech: ["React", "REST APIs", "Mobile-first UI"],
     image: "/images/projects/barbera.webp",
   },
   {
