@@ -249,8 +249,10 @@ export type Project = {
   slug: string;
   name: string;
   kind: string;
-  url: string;
-  domain: string;
+  /** Leave out for private projects (e.g. employee-only): the card then has no link. */
+  url?: string;
+  /** Shown in the browser frame; falls back to "Private platform" when there is no url. */
+  domain?: string;
   role: string;
   summary: string;
   /** Short bullet list, used on regular project cards. */
@@ -443,17 +445,16 @@ export const projects: Project[] = [
     slug: "dukkan",
     name: "Dukkan by Qatar Duty Free",
     kind: "Employee eCommerce platform",
-    url: "https://dukkan.qatardutyfree.com",
-    domain: "dukkan.qatardutyfree.com",
+    domain: "Private, employee access only",
     role: "Frontend developer",
     summary:
-      "Fully CMS-driven eCommerce platform where admins control page layouts without touching code.",
+      "Fully CMS-driven eCommerce platform for Qatar Duty Free employees, where admins control page layouts without touching code.",
     highlights: [
       "Admin-controlled page layouts built from reusable Storybook components.",
       "Contentstack integration for products, promotions and content.",
     ],
-    tech: ["Next.js", "TypeScript", "Storybook", "Contentstack"],
-    image: null, // TODO: add screenshot; platform is behind employee SSO login
+    tech: ["Next.js", "TypeScript", "SCSS", "Storybook", "Contentstack"],
+    image: "/images/projects/dukkan.webp",
   },
   {
     slug: "mentalhappy",

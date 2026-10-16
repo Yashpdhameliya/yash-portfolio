@@ -13,7 +13,7 @@ function BrowserFrame({ project }: { project: Project }) {
         <span className="h-2 w-2 rounded-full bg-line-strong" />
         <span className="h-2 w-2 rounded-full bg-line-strong" />
         <span className="ml-2 flex-1 truncate rounded-md bg-bg-soft px-2 py-0.5 font-mono text-[10px] text-fg-faint">
-          {project.domain}
+          {project.domain ?? "Private platform"}
         </span>
       </div>
       <div className="relative aspect-[16/10] overflow-hidden">
@@ -39,7 +39,7 @@ function Cover({ project }: { project: Project }) {
     <div className="dot-grid relative flex h-full w-full items-center justify-center bg-gradient-to-br from-accent-soft via-bg-soft to-amber-soft">
       <div className="text-center">
         <p className="display text-6xl text-accent md:text-7xl">{project.name.charAt(0)}</p>
-        <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.2em] text-fg-faint">{project.domain}</p>
+        <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.2em] text-fg-faint">{project.domain ?? "Private platform"}</p>
       </div>
     </div>
   );
@@ -48,6 +48,7 @@ function Cover({ project }: { project: Project }) {
 type Layout = "card" | "wide" | "wide-reverse";
 
 function ArrowLink({ project }: { project: Project }) {
+  if (!project.url) return null;
   return (
     <a
       href={project.url}
@@ -103,25 +104,35 @@ function Card({ project, layout = "card", label }: { project: Project; layout?: 
           wide ? `md:grid md:gap-8 ${reverse ? "md:grid-cols-[0.9fr_1.1fr]" : "md:grid-cols-[1.1fr_0.9fr]"}` : ""
         }
       >
-        <a
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          tabIndex={-1}
-          aria-hidden
-          className={`block ${reverse ? "md:order-2" : ""}`}
-        >
-          <BrowserFrame project={project} />
-        </a>
+        {project.url ? (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            tabIndex={-1}
+            aria-hidden
+            className={`block ${reverse ? "md:order-2" : ""}`}
+          >
+            <BrowserFrame project={project} />
+          </a>
+        ) : (
+          <div className={reverse ? "md:order-2" : ""}>
+            <BrowserFrame project={project} />
+          </div>
+        )}
 
         <div className={`flex h-full flex-col p-3 pt-5 ${wide ? "md:justify-center md:p-2" : ""} ${reverse ? "md:order-1" : ""}`}>
           <div className="flex items-start justify-between gap-4">
             <div>
               {label ? <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.2em] text-accent">{label}</p> : null}
               <h3 className={`font-semibold text-fg ${wide ? "text-2xl md:text-3xl" : "text-lg"}`}>
-                <a href={project.url} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent">
-                  {project.name}
-                </a>
+                {project.url ? (
+                  <a href={project.url} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent">
+                    {project.name}
+                  </a>
+                ) : (
+                  project.name
+                )}
               </h3>
               <p className="mt-0.5 text-sm text-fg-muted">{project.kind}</p>
             </div>

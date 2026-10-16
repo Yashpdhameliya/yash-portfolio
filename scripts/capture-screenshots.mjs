@@ -14,7 +14,7 @@ const SITES = [
   { slug: "exambro", url: "https://exambro.app/" },
   { slug: "sirohotels", url: "https://sirohotels.com/" },
   { slug: "olysim", url: "https://olysim.com/" },
-  { slug: "dukkan", url: "https://dukkan.qatardutyfree.com/" },
+  // dukkan: employee-only platform behind a login; its image (public/images/projects/dukkan.webp) is supplied manually.
   { slug: "mentalhappy", url: "https://mentalhappy.com/" },
   { slug: "barbera", url: "https://barbera.io/" },
   // viewportHeight: a taller window pushes this site's fixed notice bar below the 1600x1000 area we keep.
