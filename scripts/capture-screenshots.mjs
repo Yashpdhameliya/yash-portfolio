@@ -17,6 +17,8 @@ const SITES = [
   { slug: "dukkan", url: "https://dukkan.qatardutyfree.com/" },
   { slug: "mentalhappy", url: "https://mentalhappy.com/" },
   { slug: "barbera", url: "https://barbera.io/" },
+  // viewportHeight: a taller window pushes this site's fixed notice bar below the 1600x1000 area we keep.
+  { slug: "lingling", url: "https://www.linglingdubai.com/", viewportHeight: 1120 },
 ];
 
 const CONSENT_BUTTONS = [
@@ -48,6 +50,7 @@ for (const site of SITES) {
   if (only.length && !only.includes(site.slug)) continue;
   console.log(`→ ${site.slug}: ${site.url}`);
   const page = await context.newPage();
+  await page.setViewportSize({ width: 1600, height: site.viewportHeight ?? 1000 });
   try {
     await page.goto(site.url, { waitUntil: "domcontentloaded", timeout: 45_000 });
     await page.waitForLoadState("networkidle", { timeout: 20_000 }).catch(() => {});
@@ -70,10 +73,21 @@ for (const site of SITES) {
         [id*="onetrust" i], [class*="cookie" i], [id*="cookie" i] { display: none !important; }
       `,
     });
+    // Hide temporary announcement bars (e.g. "Important notice") so screenshots show the design.
+    await page.evaluate(() => {
+      for (const el of document.querySelectorAll("div,section,aside,header")) {
+        const t = (el.innerText || "").trim();
+        if (/^important notice/i.test(t) && el.getBoundingClientRect().height < 160) {
+          let bar = el;
+          while (bar.parentElement && bar.parentElement !== document.body && bar.parentElement.getBoundingClientRect().height < 160) bar = bar.parentElement;
+          bar.style.display = "none";
+        }
+      }
+    });
     await page.waitForTimeout(400);
 
     const raw = path.join(rawDir, `${site.slug}.png`);
-    await page.screenshot({ path: raw, fullPage: false });
+    await page.screenshot({ path: raw, fullPage: false, clip: { x: 0, y: 0, width: 1600, height: 1000 } });
     const out = path.join(outDir, `${site.slug}.webp`);
     await sharp(raw).resize(1200, 750, { fit: "cover", position: "top" }).webp({ quality: 80 }).toFile(out);
     console.log(`   ✓ ${path.relative(process.cwd(), out)} (${Math.round(statSync(out).size / 1024)} KB)`);

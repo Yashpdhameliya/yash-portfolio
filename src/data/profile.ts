@@ -489,6 +489,23 @@ export const projects: Project[] = [
     tech: ["Salon POS", "Booking", "Multi-outlet", "iOS & Android"],
     image: "/images/projects/barbera.webp",
   },
+  {
+    slug: "lingling",
+    name: "Ling Ling Dubai",
+    kind: "Venue website · Dubai",
+    url: "https://www.linglingdubai.com",
+    domain: "linglingdubai.com",
+    role: "Frontend developer",
+    summary:
+      "A fully custom website for a Dubai venue. I built the whole UI from scratch, with every page driven by Contentstack CMS so the team can update content without a developer.",
+    highlights: [
+      "Fully custom UI in Next.js and SCSS, with no ready-made templates.",
+      "Dynamic pages and sections managed in Contentstack CMS, the same approach as SIRO Hotels.",
+      "SEO friendly from the ground up: server rendering, metadata and clean semantic markup.",
+    ],
+    tech: ["Next.js", "SCSS", "Contentstack CMS", "SEO"],
+    image: "/images/projects/lingling.webp",
+  },
 ];
 
 /** Shown highlighted inside the skill groups: the stack recruiters should notice first. */
