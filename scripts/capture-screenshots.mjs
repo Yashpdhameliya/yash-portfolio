@@ -16,6 +16,7 @@ const SITES = [
   { slug: "olysim", url: "https://olysim.com/" },
   { slug: "dukkan", url: "https://dukkan.qatardutyfree.com/" },
   { slug: "mentalhappy", url: "https://mentalhappy.com/" },
+  { slug: "barbera", url: "https://barbera.io/" },
 ];
 
 const CONSENT_BUTTONS = [

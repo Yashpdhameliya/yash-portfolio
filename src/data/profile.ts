@@ -140,7 +140,7 @@ export const sections = {
     title: "Some of the projects",
     accent: "I've worked on.",
     intro:
-      "A few of the 15+ projects I've been part of: eSIM platforms, school exam software, hotel and eCommerce websites, and a mental-health app.",
+      "A few of the 15+ projects I've been part of: eSIM platforms, school exam software, salon management software, hotel and eCommerce websites, and a mental-health app.",
   },
   skills: {
     eyebrow: "Skills",
@@ -470,6 +470,24 @@ export const projects: Project[] = [
     ],
     tech: ["Next.js", "Chakra UI", "Node.js", "Flutter", "Webflow CMS"],
     image: "/images/projects/mentalhappy.webp",
+  },
+  {
+    slug: "barbera",
+    name: "Barbera",
+    kind: "Salon & spa management software",
+    url: "https://barbera.io",
+    domain: "barbera.io",
+    role: "Developer",
+    summary:
+      "A cloud platform that runs the day-to-day of salons, spas and wellness studios, trusted by 600+ businesses in 4 countries. It comes with a mobile app for iOS and Android.",
+    highlights: [
+      "Online booking and appointment calendar, billing and POS, and client records with feedback and reminders.",
+      "Memberships, vouchers and offers, plus WhatsApp and SMS messaging to keep clients coming back.",
+      "Inventory, expenses and profit and loss reports, with staff roles and permissions.",
+      "Real-time dashboard to manage multiple outlets from one account.",
+    ],
+    tech: ["Salon POS", "Booking", "Multi-outlet", "iOS & Android"],
+    image: "/images/projects/barbera.webp",
   },
 ];
 
