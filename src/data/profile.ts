@@ -342,6 +342,38 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    slug: "exambro",
+    name: "Exambro",
+    kind: "School exam & learning management platform",
+    url: "https://exambro.app",
+    domain: "exambro.app",
+    role: "Frontend lead",
+    summary:
+      "Multi-tenant, multi-school platform with role-based dashboards for super admins, school admins, teachers and students, rendered inside a Flutter app via WebView.",
+    highlights: [
+      "Print-ready PDF generation for exam papers and results, with MathJax equation rendering.",
+      "Real-time Live Test module with timer and auto-submission.",
+    ],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Flutter (WebView)"],
+    image: "/images/projects/exambro.webp",
+  },
+  {
+    slug: "sirohotels",
+    name: "SIRO Hotels",
+    kind: "Luxury hotel website · Dubai",
+    url: "https://sirohotels.com",
+    domain: "sirohotels.com",
+    role: "Frontend developer",
+    summary:
+      "CMS-driven hotel website with dynamic booking flows and heavy video and imagery that still scores 90+ on Lighthouse.",
+    highlights: [
+      "Contentstack-powered pages with a Storybook component library.",
+      "Optimized large video/image delivery for fast loads on every device.",
+    ],
+    tech: ["Next.js", "TypeScript", "Storybook", "Contentstack"],
+    image: "/images/projects/sirohotels.webp",
+  },
+  {
     slug: "olysim",
     name: "OlySim",
     kind: "eSIM store · India & global",
@@ -406,38 +438,6 @@ export const projects: Project[] = [
     tech: ["Next.js 15", "TypeScript", "SCSS", "Bootstrap", "next-seo", "Stripe", "Razorpay", "Laravel"],
     image: "/images/projects/olysim.webp",
     featured: true,
-  },
-  {
-    slug: "exambro",
-    name: "Exambro",
-    kind: "School exam & learning management platform",
-    url: "https://exambro.app",
-    domain: "exambro.app",
-    role: "Frontend lead",
-    summary:
-      "Multi-tenant, multi-school platform with role-based dashboards for super admins, school admins, teachers and students, rendered inside a Flutter app via WebView.",
-    highlights: [
-      "Print-ready PDF generation for exam papers and results, with MathJax equation rendering.",
-      "Real-time Live Test module with timer and auto-submission.",
-    ],
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Flutter (WebView)"],
-    image: "/images/projects/exambro.webp",
-  },
-  {
-    slug: "sirohotels",
-    name: "SIRO Hotels",
-    kind: "Luxury hotel website · Dubai",
-    url: "https://sirohotels.com",
-    domain: "sirohotels.com",
-    role: "Frontend developer",
-    summary:
-      "CMS-driven hotel website with dynamic booking flows and heavy video and imagery that still scores 90+ on Lighthouse.",
-    highlights: [
-      "Contentstack-powered pages with a Storybook component library.",
-      "Optimized large video/image delivery for fast loads on every device.",
-    ],
-    tech: ["Next.js", "TypeScript", "Storybook", "Contentstack"],
-    image: "/images/projects/sirohotels.webp",
   },
   {
     slug: "dukkan",

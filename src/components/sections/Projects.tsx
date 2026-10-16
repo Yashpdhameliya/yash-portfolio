@@ -156,11 +156,26 @@ function Card({ project, layout = "card", label }: { project: Project; layout?: 
 }
 
 export function Projects() {
-  const featured = projects.filter((p) => p.featured);
-  const rest = projects.filter((p) => !p.featured);
-  // Last project closes the section as a wide card (image on the right) so the grid never leaves an orphan.
-  const closing = rest.length % 2 === 1 ? rest[rest.length - 1] : undefined;
-  const grid = closing ? rest.slice(0, -1) : rest;
+  // Walk the list in order: featured projects become full-width cards (alternating
+  // image side); the regular ones between them are grouped into two-column rows.
+  type Block = { kind: "wide"; project: Project; reverse: boolean } | { kind: "grid"; items: Project[] };
+  const blocks: Block[] = [];
+  let wideCount = 0;
+  for (const p of projects) {
+    if (p.featured) {
+      blocks.push({ kind: "wide", project: p, reverse: wideCount++ % 2 === 1 });
+    } else {
+      const last = blocks[blocks.length - 1];
+      if (last?.kind === "grid") last.items.push(p);
+      else blocks.push({ kind: "grid", items: [p] });
+    }
+  }
+  // A lone card at the very end closes the section as a wide card instead of leaving a gap.
+  const end = blocks[blocks.length - 1];
+  if (end?.kind === "grid" && end.items.length % 2 === 1) {
+    const lone = end.items.pop()!;
+    blocks.push({ kind: "wide", project: lone, reverse: wideCount++ % 2 === 1 });
+  }
 
   return (
     <Section
@@ -175,23 +190,21 @@ export function Projects() {
       intro={sections.projects.intro}
     >
       <div className="grid gap-5 md:gap-6">
-        {featured.map((p, i) => (
-          <Reveal key={p.slug}>
-            <Card project={p} layout={i % 2 === 0 ? "wide" : "wide-reverse"} label="Featured" />
-          </Reveal>
-        ))}
-        <div className="grid gap-5 sm:grid-cols-2 md:gap-6">
-          {grid.map((p, i) => (
-            <Reveal key={p.slug} delay={0.06 * (i % 2)}>
-              <Card project={p} />
+        {blocks.map((b, i) =>
+          b.kind === "wide" ? (
+            <Reveal key={b.project.slug}>
+              <Card project={b.project} layout={b.reverse ? "wide-reverse" : "wide"} label={b.project.featured ? "Featured" : undefined} />
             </Reveal>
-          ))}
-        </div>
-        {closing ? (
-          <Reveal>
-            <Card project={closing} layout="wide-reverse" />
-          </Reveal>
-        ) : null}
+          ) : b.items.length ? (
+            <div key={`grid-${i}`} className="grid gap-5 sm:grid-cols-2 md:gap-6">
+              {b.items.map((p, j) => (
+                <Reveal key={p.slug} delay={0.06 * (j % 2)}>
+                  <Card project={p} />
+                </Reveal>
+              ))}
+            </div>
+          ) : null,
+        )}
       </div>
     </Section>
   );
