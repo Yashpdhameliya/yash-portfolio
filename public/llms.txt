@@ -1,0 +1,14 @@
+# Yash Dhameliya
+
+> Tech Lead & AI-Native Full-Stack Engineer from Surat, Gujarat, India. Nearly 5 years building production web and mobile products with Next.js, NestJS, MySQL, PostgreSQL, AWS and Flutter.
+
+This is Yash Dhameliya's personal portfolio. It lists his experience, selected projects, skills and contact details.
+
+## Pages
+- [Portfolio home](https://yash-dhameliya.vercel.app/): about, experience, projects, skills and contact on one page
+
+## Contact
+- Email: meyashpdhameliya18@gmail.com
+- LinkedIn: https://www.linkedin.com/in/yash-dhameliya-563668146/
+- GitHub: https://github.com/Yashpdhameliya
+- Location: Surat, Gujarat, India

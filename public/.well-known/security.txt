@@ -1,0 +1,4 @@
+Contact: mailto:meyashpdhameliya18@gmail.com
+Expires: 2027-10-16T00:00:00.000Z
+Preferred-Languages: en, hi, gu
+Canonical: https://yash-dhameliya.vercel.app/.well-known/security.txt
