@@ -160,6 +160,20 @@ body {
   transform: scale(1.035);
 }
 
+/* Tailwind v4 resets buttons to the arrow cursor; clickable controls should show the hand. */
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+summary,
+select,
+label[for],
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+
 /* Focus rings that match the accent. */
 :focus-visible {
   outline: 2px solid var(--accent);
