@@ -140,7 +140,7 @@ export const sections = {
     title: "Some of the projects",
     accent: "I've worked on.",
     intro:
-      "A few of the 15+ projects I've been part of: eSIM platforms, school exam software, salon management software, hotel and eCommerce websites, and a mental-health app.",
+      "A selection from 15+ projects: eSIM platforms, school exam software, salon management, hotel and eCommerce websites and a mental-health app. Click any project to see what I built.",
   },
   skills: {
     eyebrow: "Skills",
