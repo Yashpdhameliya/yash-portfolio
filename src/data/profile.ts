@@ -507,12 +507,12 @@ export const projects: Project[] = [
   {
     slug: "lingling",
     name: "Ling Ling Dubai",
-    kind: "Venue website · Dubai",
+    kind: "Restaurant & nightlife website · Dubai",
     url: "https://www.linglingdubai.com",
     domain: "linglingdubai.com",
     role: "Frontend developer",
     summary:
-      "A fully custom website for a Dubai venue. I built the whole UI from scratch, with every page driven by Contentstack CMS so the team can update content without a developer.",
+      "A fully custom website for a Pan-Asian restaurant and nightlife venue in Dubai. I built the whole UI from scratch, with every page driven by Contentstack CMS so the team can update content without a developer.",
     highlights: [
       "Fully custom UI in Next.js and SCSS, with no ready-made templates.",
       "Dynamic pages and sections managed in Contentstack CMS, the same approach as SIRO Hotels.",
