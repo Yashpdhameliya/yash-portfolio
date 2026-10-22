@@ -32,7 +32,7 @@ export function Experience() {
         />
 
         {experience.map((job, i) => (
-          <Reveal as="li" key={job.company} delay={0.05 * i} className="relative pb-14 pl-9 last:pb-0 md:grid md:grid-cols-[11rem_1fr] md:gap-8 md:pl-0">
+          <Reveal as="li" key={`${job.company}-${job.role}`} delay={0.05 * i} className="relative pb-14 pl-9 last:pb-0 md:grid md:grid-cols-[11rem_1fr] md:gap-8 md:pl-0">
             {/* Dot */}
             <span
               className={`absolute left-0 top-2 inline-flex h-[15px] w-[15px] items-center justify-center rounded-full border-2 bg-bg md:left-[11rem] ${
